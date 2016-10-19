@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:state_pressed="true" >
+        <shape
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:shape="oval" android:id="@+id/circular_like_button">
+
+            <solid
+                android:color="@color/material_light_green_400"/>
+
+        </shape>
+    </item>
+
+    <item>
+        <shape
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:shape="oval" android:id="@+id/circular_like_button">
+
+            <solid
+                android:color="@color/material_light_green_300"/>
+
+        </shape>
+    </item>
+
+</selector>

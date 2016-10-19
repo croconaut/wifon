@@ -1,0 +1,233 @@
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--
+        Base application theme, dependent on API level. This theme is replaced
+        by AppBaseTheme from res/values-vXX/styles.xml on newer device
+    -->
+    <style name="AppBaseTheme" parent="@style/Theme.AppCompat.Light.NoActionBar">
+
+        <!--
+            Theme customizations available in newer API levels can go in
+            res/values-vXX/styles.xml, while customizations related to
+            backward-compatibility can go her
+        -->
+        <item name="homeAsUpIndicator">@drawable/ic_action_drawer</item>
+
+        <item name="android:windowBackground">@color/material_white</item>
+        <item name="android:colorBackground">@color/material_white</item>
+    </style>
+
+    <!-- Application theme. -->
+    <style name="AppTheme" parent="AppBaseTheme">
+
+        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+        <item name="titleTextStyle">@style/MyTheme.ActionBar.TitleTextStyle</item>
+        <item name="android:textColor">@color/material_grey_600</item>
+
+        <item name="android:windowBackground">@color/material_white</item>
+        <item name="android:colorBackground">@color/material_white</item>
+    </style>
+
+    <style name="MyTheme.ActionBar.TitleTextStyle" parent="android:style/TextAppearance.Medium">
+        <item name="android:textColor">@color/green_themed_dark</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="NoTitleDialog" parent="android:Theme.Dialog">
+        <item name="android:windowNoTitle">true</item>
+    </style>
+
+    <style name="dialog_animation">
+        <item name="android:windowEnterAnimation">@anim/abc_slide_in_top</item>
+        <item name="android:windowExitAnimation">@anim/abc_slide_out_top</item>
+    </style>
+
+    <style name="bb_text_appearance" parent="android:style/TextAppearance">
+        <item name="android:textSize">14sp</item>
+    </style>
+
+
+    <style name="MyCustomTabLayout" parent="Widget.Design.TabLayout">
+        <item name="tabMaxWidth">@dimen/design_tab_max_width</item>
+        <item name="tabIndicatorColor">?attr/colorAccent</item>
+        <item name="tabIndicatorHeight">2dp</item>
+        <item name="tabPaddingStart">12dp</item>
+        <item name="tabPaddingEnd">12dp</item>
+        <item name="tabTextAppearance">@style/TextAppearance.Design.Tab</item>
+        <item name="tabSelectedTextColor">@color/material_white</item>
+    </style>
+
+    <style name="MyActionModeOverFlowStyle" parent="Base.Widget.AppCompat.ActionButton.Overflow">
+        <item name="android:src">@drawable/ic_action_back</item>
+    </style>
+
+    <style name="MyActionModeTitleTextStyle" parent="Base.TextAppearance.AppCompat.Widget.ActionMode.Title">
+        <item name="android:textColor">@color/material_white</item>
+    </style>
+
+    <style name="MyActionMode" parent="Base.Widget.AppCompat.ActionMode">
+        <item name="background">@color/material_grey_500</item>
+        <item name="backgroundSplit">@color/material_grey_500</item>
+        <item name="titleTextStyle">@style/MyActionModeTitleTextStyle</item>
+        <item name="android:actionOverflowButtonStyle">@style/MyActionModeOverFlowStyle</item>
+        <item name="android:actionModeCloseDrawable">@drawable/ic_action_back</item>
+    </style>
+
+    <style name="AppTheme.Red" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="iconLikes">@drawable/thumb_up_selector_red</item>
+        <item name="iconComments">@drawable/ic_comment_red_24dp</item>
+        <item name="colorPrimary">@color/material_red_500</item>
+        <item name="colorPrimaryDark">@color/material_red_700</item>
+        <item name="colorPrimaryLight">@color/material_red_300</item>
+        <item name="btnLike">@drawable/circular_like_button_green_selector</item>
+        <item name="btnComment">@drawable/circular_comments_button_green_selector</item>
+        <item name="incomingMessageBubble">@drawable/incoming_message_red_selector</item>
+        <item name="sendButton">@drawable/send_button_selector_red</item>
+        <item name="statusSelector">@drawable/status_selector_red</item>
+        <item name="statsSelector">@drawable/stats_selector_red</item>
+        <item name="star">@drawable/ic_star_red_36dp</item>
+        <item name="starOutline">@drawable/ic_star_outline_red_36dp</item>
+        <item name="unreadMessages">@drawable/new_message_red</item>
+        <item name="friendsIcon">@drawable/ic_people_red_24dp</item>
+
+        <item name="actionModeStyle">@style/MyActionMode</item>
+        <item name="windowActionModeOverlay">true</item>
+        <item name="actionModeCloseDrawable">@drawable/ic_action_back</item>
+
+        <item name="android:windowBackground">@color/material_white</item>
+        <item name="android:colorBackground">@color/material_white</item>
+
+        <item name="themeColor">@color/red_themed</item>
+
+    </style>
+
+    <style name="AppTheme.Green" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="iconLikes">@drawable/thumb_up_selector_green</item>
+        <item name="iconComments">@drawable/ic_comment_green_24dp</item>
+        <item name="colorPrimary">@color/material_light_green_500</item>
+        <item name="colorPrimaryDark">@color/material_light_green_700</item>
+        <item name="colorPrimaryLight">@color/material_light_green_300</item>
+        <item name="btnLike">@drawable/circular_like_button_red_selector</item>
+        <item name="btnComment">@drawable/circular_comments_button_red_selector</item>
+        <item name="incomingMessageBubble">@drawable/incoming_message_green_selector</item>
+        <item name="sendButton">@drawable/send_button_selector_green</item>
+        <item name="statusSelector">@drawable/status_selector_green</item>
+        <item name="statsSelector">@drawable/stats_selector_green</item>
+        <item name="star">@drawable/ic_star_green_36dp</item>
+        <item name="starOutline">@drawable/ic_star_outline_green_36dp</item>
+        <item name="unreadMessages">@drawable/new_message_green</item>
+        <item name="friendsIcon">@drawable/ic_people_green_24dp</item>
+
+
+
+        <item name="actionModeStyle">@style/MyActionMode</item>
+        <item name="windowActionModeOverlay">true</item>
+        <item name="actionModeCloseDrawable">@drawable/ic_action_back</item>
+
+        <item name="android:windowBackground">@color/material_white</item>
+        <item name="android:colorBackground">@color/material_white</item>
+
+        <item name="themeColor">@color/green_themed</item>
+
+    </style>
+
+    <style name="AppTheme.Blue" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="iconLikes">@drawable/thumb_up_selector_blue</item>
+        <item name="iconComments">@drawable/ic_comment_blue_24dp</item>
+        <item name="colorPrimary">@color/material_blue_500</item>
+        <item name="colorPrimaryDark">@color/material_blue_700</item>
+        <item name="colorPrimaryLight">@color/material_blue_300</item>
+        <item name="btnLike">@drawable/circular_like_button_green_selector</item>
+        <item name="btnComment">@drawable/circular_comments_button_green_selector</item>
+        <item name="incomingMessageBubble">@drawable/incoming_message_blue_selector</item>
+        <item name="sendButton">@drawable/send_button_selector_blue</item>
+        <item name="statusSelector">@drawable/status_selector_blue</item>
+        <item name="statsSelector">@drawable/stats_selector_blue</item>
+        <item name="star">@drawable/ic_star_blue_36dp</item>
+        <item name="starOutline">@drawable/ic_star_outline_blue_36dp</item>
+        <item name="unreadMessages">@drawable/new_message_blue</item>
+        <item name="friendsIcon">@drawable/ic_people_blue_24dp</item>
+
+
+        <item name="actionModeStyle">@style/MyActionMode</item>
+        <item name="windowActionModeOverlay">true</item>
+        <item name="actionModeCloseDrawable">@drawable/ic_action_back</item>
+
+        <item name="android:windowBackground">@color/material_white</item>
+        <item name="android:colorBackground">@color/material_white</item>
+
+        <item name="themeColor">@color/blue_themed</item>
+    </style>
+
+    <style name="AppTheme.Orange" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="iconLikes">@drawable/thumb_up_selector_orange</item>
+        <item name="iconComments">@drawable/ic_comment_orange_24dp</item>
+        <item name="colorPrimary">@color/material_orange_500</item>
+        <item name="colorPrimaryDark">@color/material_orange_700</item>
+        <item name="colorPrimaryLight">@color/material_orange_300</item>
+        <item name="btnLike">@drawable/circular_like_button_green_selector</item>
+        <item name="btnComment">@drawable/circular_comments_button_green_selector</item>
+        <item name="incomingMessageBubble">@drawable/incoming_message_orange_selector</item>
+        <item name="sendButton">@drawable/send_button_selector_orange</item>
+        <item name="statusSelector">@drawable/status_selector_orange</item>
+        <item name="statsSelector">@drawable/stats_selector_orange</item>
+        <item name="star">@drawable/ic_star_orange_36dp</item>
+        <item name="starOutline">@drawable/ic_star_outline_orange_36dp</item>
+        <item name="unreadMessages">@drawable/new_message_orange</item>
+        <item name="friendsIcon">@drawable/ic_people_orange_24dp</item>
+
+
+        <item name="actionModeStyle">@style/MyActionMode</item>
+        <item name="windowActionModeOverlay">true</item>
+        <item name="actionModeCloseDrawable">@drawable/ic_action_back</item>
+
+        <item name="android:windowBackground">@color/material_white</item>
+        <item name="android:colorBackground">@color/material_white</item>
+
+        <item name="themeColor">@color/orange_themed</item>
+    </style>
+
+    <style name="AppTheme.Pink" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="iconLikes">@drawable/thumb_up_selector_pink</item>
+        <item name="iconComments">@drawable/ic_comment_pink_24dp</item>
+        <item name="colorPrimary">@color/material_pink_300</item>
+        <item name="colorPrimaryDark">@color/material_pink_500</item>
+        <item name="colorPrimaryLight">@color/material_pink_200</item>
+        <item name="btnLike">@drawable/circular_like_button_green_selector</item>
+        <item name="btnComment">@drawable/circular_comments_button_green_selector</item>
+        <item name="incomingMessageBubble">@drawable/incoming_message_pink_selector</item>
+        <item name="sendButton">@drawable/send_button_selector_pink</item>
+        <item name="statusSelector">@drawable/status_selector_pink</item>
+        <item name="statsSelector">@drawable/stats_selector_pink</item>
+        <item name="star">@drawable/ic_star_pink_36dp</item>
+        <item name="starOutline">@drawable/ic_star_outline_pink_36dp</item>
+        <item name="unreadMessages">@drawable/new_message_pink</item>
+        <item name="friendsIcon">@drawable/ic_people_pink_24dp</item>
+
+        <item name="actionModeStyle">@style/MyActionMode</item>
+        <item name="windowActionModeOverlay">true</item>
+        <item name="actionModeCloseDrawable">@drawable/ic_action_back</item>
+
+        <item name="android:windowBackground">@color/material_white</item>
+        <item name="android:colorBackground">@color/material_white</item>
+
+        <item name="themeColor">@color/pink_themed</item>
+
+    </style>
+
+    <attr name="iconComments" format="reference"/>
+    <attr name="iconLikes" format="reference"/>
+    <attr name="btnComment" format="reference"/>
+    <attr name="btnLike" format="reference"/>
+    <attr name="colorPrimaryLight" format="reference"/>
+    <attr name="incomingMessageBubble" format="reference"/>
+    <attr name="sendButton" format="reference"/>
+    <attr name="statusSelector" format="reference"/>
+    <attr name="statsSelector" format="reference"/>
+    <attr name="star" format="reference"/>
+    <attr name="starOutline" format="reference"/>
+    <attr name="unreadMessages" format="reference"/>
+    <attr name="friendsIcon" format="reference"/>
+    <attr name="themeColor" format="reference"/>
+
+</resources>

@@ -1,0 +1,62 @@
+apply plugin: 'com.android.application'
+
+android {
+    buildToolsVersion "24.0.2"
+
+    defaultConfig {
+        applicationId "com.croconaut.ratemebuddy"
+        useLibrary 'org.apache.http.legacy'
+
+        minSdkVersion 16
+        targetSdkVersion 22
+
+        versionCode 9
+        versionName "1.0"
+
+        compileOptions {
+            sourceCompatibility JavaVersion.VERSION_1_7
+            targetCompatibility JavaVersion.VERSION_1_7
+        }
+    }
+
+    lintOptions {
+        //checkReleaseBuilds false
+        abortOnError false
+    }
+
+    buildTypes {
+        release {
+            compileSdkVersion 24
+
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+        debug {
+            compileSdkVersion 23
+        }
+    }
+}
+
+repositories {
+    maven {
+        url myMavenRepoReadUrl
+    }
+    // unfortunately, POM files do not contain repository urls...
+    maven {
+        url "https://s3.amazonaws.com/repo.commonsware.com"
+    }
+}
+
+dependencies {
+    compile 'com.android.support:appcompat-v7:24.2.1'
+    compile 'com.android.support:design:24.2.1'
+    compile 'com.android.support:support-v13:24.2.1'
+    compile 'com.android.support:recyclerview-v7:24.2.1'
+    compile 'com.github.bumptech.glide:glide:3.6.1' //google lib
+
+    compile 'com.roughike:bottom-bar:2.0.2'
+    compile 'com.soundcloud.android:android-crop:1.0.1@aar'
+    compile 'com.amulyakhare:com.amulyakhare.textdrawable:1.0.1'
+
+    compile 'com.croconaut:cpt:1.0.2'
+}

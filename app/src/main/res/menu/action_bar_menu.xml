@@ -1,0 +1,37 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:yourapp="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/menuSort"
+        android:icon="@drawable/ic_menu_sort"
+        android:visible="false"
+        yourapp:showAsAction="ifRoom">
+        <menu>
+            <item
+                android:id="@+id/menuSortAlphabetically"
+                android:icon="@drawable/ic_action_menu_sort_alpha"
+                android:title="@string/action_sort_alphabetically" />
+            <item
+                android:id="@+id/menuSortRating"
+                android:icon="@drawable/ic_action_menu_sort_votes"
+                android:title="@string/action_sort_rating" />
+            <item
+                android:id="@+id/menuSortFavourites"
+                android:icon="@drawable/ic_action_stars"
+                android:title="@string/action_sort_favourites" />
+        </menu>
+    </item>
+
+    <item
+        android:id="@+id/menuCheck"
+        android:icon="@drawable/ic_action_check"
+        android:visible="false"
+        yourapp:showAsAction="always" />
+
+    <item
+        android:id="@+id/menuStar"
+        android:icon="@drawable/ic_star_outline_white_36dp"
+        android:visible="false"
+        yourapp:showAsAction="always" />
+
+</menu>

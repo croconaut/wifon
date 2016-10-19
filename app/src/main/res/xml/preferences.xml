@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <com.croconaut.ratemebuddy.ui.preferences.MyPreferenceCategory android:title="@string/prefs_ui_title">
+        <Preference
+            android:defaultValue="1"
+            android:key="pref_color"
+            android:summary="@string/prefs_color_scheme_sum"
+            android:title="@string/prefs_color_scheme_title"/>
+    </com.croconaut.ratemebuddy.ui.preferences.MyPreferenceCategory>
+    <com.croconaut.ratemebuddy.ui.preferences.MyPreferenceCategory android:title="@string/prefs_notifi_title">
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="pref_notification"
+            android:summary="@string/prefs_enable_notifi_sum"
+            android:title="@string/prefs_enable_notifi_title"/>
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="pref_nearby_notif"
+            android:summary="@string/prefs_notifi_nearby_sum"
+            android:title="@string/prefs_notifi_nearby_title"/>
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="pref_vib"
+            android:summary="@string/prefs_notifi_vibrate_sum"
+            android:title="@string/prefs_notifi_vibrate_title"/>
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="pref_sound"
+            android:summary="@string/prefs_enable_notifi_sound_sum"
+            android:title="@string/prefs_enable_notifi_sound_title"/>
+
+        <RingtonePreference
+            android:key="pref_ringtone"
+            android:ringtoneType="notification"
+            android:summary="@string/prefs_notifi_sound_ringtone_sum"
+            android:title="@string/prefs_notifi_sound_ringtone_title"/>
+    </com.croconaut.ratemebuddy.ui.preferences.MyPreferenceCategory>
+
+    <com.croconaut.ratemebuddy.ui.preferences.MyPreferenceCategory android:title="@string/prefs_category_privacy_title">
+        <!--<com.croconaut.ratemebuddy.ui.preferences.BlockedUserPreferenceDialog-->
+            <!--android:key="blockedUsers"-->
+            <!--android:summary="@string/prefs_blocked_users_sum"-->
+            <!--android:title="@string/prefs_blocked_users_title"/>-->
+
+        <Preference
+            android:key="pref_blocked_users"
+            android:summary="@string/prefs_blocked_users_sum"
+            android:title="@string/prefs_blocked_users_title"/>
+
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="pref_internet_server"
+            android:summary="@string/prefs_internet_server_summary"
+            android:title="@string/prefs_internet_server_title"/>
+
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="pref_display_info"
+            android:summary="@string/prefs_display_info_summary"
+            android:title="@string/prefs_display_info_title"/>
+
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="pref_show_me_as_friend"
+            android:summary="@string/prefs_show_me_as_friend_summary"
+            android:title="@string/prefs_show_me_as_friend_title"/>
+    </com.croconaut.ratemebuddy.ui.preferences.MyPreferenceCategory>
+
+
+    <com.croconaut.ratemebuddy.ui.preferences.MyPreferenceCategory android:title="@string/prefs_more_settings">
+        <Preference
+            android:key="pref_advanced_settings"
+            android:summary="@string/prefs_advanced_settings_sum"
+            android:title="@string/prefs_advanced_settings_title"/>
+    </com.croconaut.ratemebuddy.ui.preferences.MyPreferenceCategory>
+
+</PreferenceScreen>

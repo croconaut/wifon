@@ -1,0 +1,116 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/msgTimeOutgoingSent"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/msgSentUserTimeContainer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/msgSentUserTimeIcon"
+            android:layout_width="@dimen/iv_item_detail_height_and_width"
+            android:layout_height="@dimen/iv_item_detail_height_and_width"
+            android:layout_margin="@dimen/iv_item_detail_margin"
+            android:scaleType="centerInside"
+            android:src="@drawable/ic_msg_outgoing_black" />
+
+        <TextView
+            android:id="@+id/msgSentUserTimeText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/gray_text" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/msgSentServerTimeContainer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/msgSentServerTimeIcon"
+            android:layout_width="@dimen/iv_item_detail_height_and_width"
+            android:layout_height="@dimen/iv_item_detail_height_and_width"
+            android:layout_margin="@dimen/iv_item_detail_margin"
+            android:scaleType="centerInside"
+            android:src="@drawable/ic_msg_server_black" />
+
+        <TextView
+            android:id="@+id/msgSentServerTimeText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/gray_text" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/msgSentOtherDeviceTimeContainer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/msgSentOtherDeviceTimeIcon"
+            android:layout_width="@dimen/iv_item_detail_height_and_width"
+            android:layout_height="@dimen/iv_item_detail_height_and_width"
+            android:layout_margin="@dimen/iv_item_detail_margin"
+            android:scaleType="centerInside"
+            android:src="@drawable/ic_msg_outgoing_black" />
+
+        <TextView
+            android:id="@+id/msgSentOtherDeviceTimeText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/gray_text" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/msgSentFirstTimeContainer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/msgSentFirstTimeIcon"
+            android:layout_width="@dimen/iv_item_detail_height_and_width"
+            android:layout_height="@dimen/iv_item_detail_height_and_width"
+            android:layout_margin="@dimen/iv_item_detail_margin"
+            android:scaleType="centerInside"
+            android:src="@drawable/ic_msg_outgoing_black" />
+
+        <TextView
+            android:id="@+id/msgSentFirstTimeText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/gray_text" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/msgSentLastTimeContainer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/msgSentLastTimeIcon"
+            android:layout_width="@dimen/iv_item_detail_height_and_width"
+            android:layout_height="@dimen/iv_item_detail_height_and_width"
+            android:layout_margin="@dimen/iv_item_detail_margin"
+            android:scaleType="centerInside"
+            android:src="@drawable/ic_msg_outgoing_black" />
+
+        <TextView
+            android:id="@+id/msgSentLastTimeText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/gray_text" />
+    </LinearLayout>
+</LinearLayout>

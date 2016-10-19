@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:yourapp="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/messageMenuDetail"
+        android:icon="@drawable/ic_action_detail"
+        android:title="@string/message_menu_details"
+        yourapp:showAsAction="always" />
+    <item
+        android:id="@+id/messageMenuDelete"
+        android:icon="@drawable/ic_action_delete"
+        android:title="@string/message_menu_delete"
+        yourapp:showAsAction="always" />
+
+    <item
+        android:id="@+id/messageMenuResend"
+        android:icon="@drawable/ic_action_resend"
+        android:title="@string/message_menu_resend"
+        yourapp:showAsAction="always" />
+
+    <item
+        android:id="@+id/messageMenuCopy"
+        android:icon="@drawable/ic_action_copy"
+        android:title="@string/message_menu_copy"
+        yourapp:showAsAction="always" />
+
+</menu>

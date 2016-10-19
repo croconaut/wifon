@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">WiFON</string>
+    <string name="about_attributions_hint">Použité komponenty:</string>
+    <string name="activity_create_profile">Tvoj profil</string>
+    <string name="activity_change_status">Zmeniť status</string>
+    <string name="activity_display_title_likes">Páči sa týmto ľuďom</string>
+    <string name="activity_display_title_friends">Priatelia</string>
+    <string name="action_about">O aplikácii</string>
+    <string name="action_back">Späť</string>
+    <string name="action_settings">Nastavenia</string>
+    <string name="action_invite_friend">Pozvi kamoša</string>
+    <string name="action_share">Zdieľaj WiFON</string>
+    <string name="action_sort_alphabetically">Zoradiť abecedne</string>
+    <string name="action_sort_rating">Zoradiť podľa hodnotenia</string>
+    <string name="action_sort_favourites">Zoradiť podľa obľúbených</string>
+    <string name="action_bar_title_timeline">Časová os</string>
+    <string name="action_drawer_favourites">Priatelia (%1$d)</string>
+    <string name="action_drawer_bb_favourites">Priatelia</string>
+    <string name="action_drawer_unknown">Neznámi</string>
+    <string name="action_drawer_nearby">V okolí</string>
+    <string name="action_drawer_unread">Neprečítané</string>
+    <string name="action_write_ceo">Napíš autorom</string>
+    <string name="action_bar_title_my_profile">Môj profil</string>
+    <string name="action_report_bug">Nahlásiť chybu</string>
+    <string name="attachment_seen_at">Videná o %1$s</string>
+    <string name="attachment_delivered_at">Doručená o %1$s</string>
+    <string name="attribution_freepik">Titulné obrázky v profile - Designed by Freepik.com</string>
+    <string name="attribution_pattern1">Swirl by Uday. subtlepatterns.com</string>
+    <string name="attribution_pattern2">GPlay by Dimitrie Hoekstra. subtlepatterns.com</string>
+    <string name="attribution_pattern3">Gray Floral by Lauren. subtlepatterns.com</string>
+    <string name="attribution_pattern4">Symphony by Irfan iLias. subtlepatterns.com</string>
+    <string name="attribution_pattern5">Skulls by Adam. subtlepatterns.com</string>
+    <string name="attribution_soundcloud">Android-crop library. Copyright 2015 SoundCloud. https://github.com/jdamcd/android-crop</string>
+    <string name="attribution_image_chooser">Image chooser library. Copyright 2013 Kumar Bibek. https://github.com/coomar2841/image-chooser-library</string>
+    <string name="attribution_text_drawable">Text Drawable library. Copyright Amulya Khare. https://github.com/amulyakhare/TextDrawable</string>
+
+    <string name="ceo_name">Autor WiFONu</string>
+    <string name="cancel">Zrušiť</string>
+
+    <string name="content_desc_photo">Fotka používateľa</string>
+    <string name="content_desc_logo">Logo aplikácie</string>
+    <string name="content_desc_list_pref_check">Stlač pre kontrolu</string>
+    <string name="comment_new_hint">Nový komentár!</string>
+
+    <string name="dialog_download_btn_download">Stiahni</string>
+    <string name="dialog_download_btn_not_download">Nestiahni</string>
+    <string name="dialog_download_btn_only_wifi_download">Stiahni len na WiFi</string>
+    <string name="dialog_download_rb_only_this">Len tento súbor</string>
+    <string name="dialog_download_rb_this_and_other">Tento a ostatné súbory (%1$d ; %2$s)</string>
+    <string name="dialog_download_rb_all_for_future">Všetky súbory (aj v budúcnosti)</string>
+
+    <string name="dialog_upload_btn_upload">Odošli</string>
+    <string name="dialog_upload_btn_not_upload">Neodošli</string>
+    <string name="dialog_upload_btn_only_wifi_upload">Odošli len na WiFi</string>
+    <string name="dialog_upload_rb_all_for_future">Všetky súbory (aj v budúcnosti)</string>
+
+    <string name="header_friends_count_hint">Priatelia [%1$s]:</string>
+
+    <string name="dialog_about_version">Verzia %1$s.%2$s</string>
+    <string name="dialog_no_blocked_users">Nemáš nikoho zablokovaného</string>
+    <string name="dialog_wifon_messege">Wi-Fi je vypnuté, WiFON nemôže prijímať ani posielať tvoje správy</string>
+    <string name="dialog_wifon_positive">Zapnúť Wi-Fi</string>
+    <string name="dialog_wifon_negative">Nerobiť nič</string>
+    <string name="drawer_item_people">Ľudia</string>
+    <string name="emptyHistoryText">Toto je WiFON. Je to normálny messenger, ale funguje aj bez pripojenia na Internet. Naozaj! Ak chceš, naviac môžeš zbierať lajky na tvoje statusy.</string>
+    <string name="emptyNearby">Tu sa zobrazia používatelia v tvojom okolí</string>
+    <string name="emptyUnknown">Tu sa zobrazia správy od neznámych používateľov</string>
+    <string name="emptyFavourites">Označ si niekoho ako priateľa!</string>
+    <string name="emptyUnread">Tu sa zobrazia neprečítané správy</string>
+    <string name="hop_installEarth">Google Earth nie je nainštalovaný</string>
+    <string name="hop_install">Nainštalovať</string>
+    <string name="hop_title">Potrebná inštalácia!</string>
+    <string name="hop_export_error">Export do GPX sa nepodaril</string>
+    <string name="hops_address_not_found">Presnejší popis nie je k dispozícii</string>
+    <string name="hops_not_enough_addresses">Nedostatočný počet adries pre zobrazenie</string>
+    <string name="hops_title">Správa naštívila nasledujúce miesta</string>
+    <string name="hops_title_cannot_show">Zoznam zariadení, cez ktoré prešla táto správa sa zobrazí tu.</string>
+    <string name="message_detail_hop_archived">Tu sa zobrazí trasa správy, čaká sa na potvrdenie o doručení.</string>
+    <string name="message_detail_view_on_earth">Stlač pre zobrazenie v Google Earth</string>
+    <string name="message_not_delivered">Čaká na doručenie</string>
+    <string name="message_menu_copy">Skopírovať text správy</string>
+    <string name="message_menu_copy_toast">Text správy skopírovaný</string>
+    <string name="message_menu_delete">Vymazať</string>
+    <string name="message_menu_resend">Preposlať</string>
+    <string name="message_menu_details">Zobraziť detail</string>
+
+    <string name="message_written_at">Napísaná o %1$s</string>
+    <string name="message_sent_to_user_at">Odoslaná priamo adresátovi o %1$s</string>
+    <string name="message_sent_to_other_device_at">Odoslaná na okolité zariadenie o %1$s</string>
+    <string name="message_sent_to_server_at">Odoslaná na server o %1$s</string>
+    <string name="message_sent_first_time_at">Odoslaná prvýkrát o %1$s</string>
+    <string name="message_sent_last_time_at">Odoslaná naposledy o %1$s</string>
+    <string name="message_received_time_at">Prijatá o %1$s</string>
+    <string name="message_ack_time_at">Videná o %1$s</string>
+    <string name="message_delivered_time_at">Doručená za %1$s</string>
+    <string name="message_came_up_time_at">Prišla za %1$s</string>
+    <string name="message_attachment_transfer_in">Prenesená za %1$s</string>
+    <string name="message_time_error">\u0020(Zle nastavený čas)</string>
+
+    <string name="message_attachment_detail_name">Názov: %1$s</string>
+    <string name="message_attachment_detail_size">Veľkosť: %1$s</string>
+    <string name="message_attachment_detail_mod_time">Čas poslednej úpravy: %1$s</string>
+    <string name="message_attachment_detail_transfer_speed">Rýchlosť prenesenia súboru: %1$s</string>
+    <string name="message_attachment_preview_title">Nový súbor</string>
+
+    <string name="message_deleted">Správu sa nepodarilo doručiť</string>
+    <string name="message_new_hint">Nová správa!</string>
+
+    <string name="message_download_state_finished">Stiahnutý</string>
+    <string name="message_download_state_downloading">Práve sťahuje</string>
+    <string name="message_download_state_waiting_for_download">Čaká na stiahnutie</string>
+    <string name="message_download_state_waiting_for_confirm">Čaká na potvrdenie</string>
+    <string name="message_download_state_cancelled">Nestiahnutý</string>
+
+    <string name="message_upload_state_waiting_for_upload">Čaká na odoslanie</string>
+    <string name="message_upload_state_uploading">Práve odosiela</string>
+    <string name="message_upload_state_uploaded_to_server">Odoslaný na server</string>
+    <string name="message_upload_state_uploaded_to_recipient">Odoslaný adresátovi</string>
+    <string name="message_upload_state_cancelled">Neodoslaný</string>
+
+
+    <string name="message_timeline_photo_changed">Nová profilová fotka</string>
+    <string name="message_timeline_status_changed_remote"><![CDATA[Používateľ <b>%1$s</b> si zmenil status na: <b>%2$s</b>]]></string>
+    <string name="message_timeline_status_changed"><![CDATA[Nový status: <b>%1$s</b>.]]></string>
+    <string name="message_timeline_name_changed"><![CDATA[Nové meno : <b>%1$s</b>.]]></string>
+
+    <string name="message_timeline_file_accepted">Súbor %1$s prijatý.</string>
+    <string name="message_timeline_comment_outgoing"><![CDATA[Používateľovi %1$s si komentoval status: <br /> <b> %2$s </b>]]></string>
+    <string name="message_timeline_comment_incoming"><![CDATA[%1$s komentoval tvoj status: <br /> <b> %2$s </b>]]></string>
+    <string name="message_timeline_intro">Vítaj %1$s. Toto je tvoja časová os. Tu uvidíš zmeny statusov tvojich obľúbených užívateľov spolu so súbormi a lajkmi ktoré si prijal prípadne odoslal.</string>
+    <string name="message_these_people_liked">Páči sa týmto ľuďom:</string>
+    <string name="prefs_message_workaround_recommended">Doporučujeme ti nechať túto voľbu zapnutú, inak ti nemusia chodiť správy!</string>
+    <string name="prefs_message_off_warning">Odteraz ti budú chodiť správy iba cez Internet a zariadenia v okolí ťa neuvidia</string>
+    <string name="no_statuses">Žiadne predošlé statusy</string>
+    <string name="notif_old_comment_title">Komentár na starý status!</string>
+    <string name="notif_first_time_nearby_title">%1$s je v tvojom okolí!</string>
+    <string name="notif_first_time_nearby_text">Кlikni pre kompletný zoznam</string>
+    <string name="predifined_et_text_content">Ahoj %1$s! Potvrdil som tvoju žiadosť o priateľstvo. S pozdravom %2$s :)</string>
+
+    <string name="prefs_color_blue">Modrá</string>
+    <string name="prefs_color_green">Zelená</string>
+    <string name="prefs_color_red">Červená</string>
+    <string name="prefs_color_pink">Ružová</string>
+    <string name="prefs_color_orange">Oranžová</string>
+    <string name="prefs_color_scheme_sum">Farba jednotlivých UI komponentov</string>
+    <string name="prefs_color_scheme_title">Farebná téma</string>
+    <string name="prefs_ui_title">Používateľské rozhranie</string>
+    <string name="prefs_notifi_sound_ringtone_sum">Vybrať si vlastné zvukové notifikácie</string>
+    <string name="prefs_notifi_sound_ringtone_title">Vlastná notifikácia</string>
+    <string name="prefs_enable_notifi_sum">Povoliť notifikácie v systémovej lište</string>
+    <string name="prefs_enable_notifi_title">Zapnuť notifikácie</string>
+    <string name="prefs_enable_notifi_sound_sum"></string>
+    <string name="prefs_enable_notifi_sound_title">Povoliť zvukové notifikácie</string>
+    <string name="prefs_notifi_title">Notifikácie</string>
+    <string name="prefs_notifi_vibrate_sum"></string>
+    <string name="prefs_notifi_vibrate_title">Vibrovanie</string>
+    <string name="prefs_notifi_nearby_sum">Upozorňovať, ak sa po dlhšom čase objaví niekto v okolí</string>
+    <string name="prefs_notifi_nearby_title">Notifikácie o ľudoch z okolia</string>
+    <string name="prefs_blocked_users_sum">Správa zablokovaných ľudí</string>
+    <string name="prefs_blocked_users_title">Zablokovaní ľudia</string>
+    <string name="prefs_more_settings">Pokročilé</string>
+    <string name="prefs_performance">Wi-Fi parametre</string>
+    <string name="prefs_advanced_settings_title">Wi-Fi nastavenia</string>
+    <string name="prefs_advanced_settings_sum">Zmena nastavení Wi-Fi komunikácie</string>
+    <string name="prefs_battery_enabled">Zapnutá</string>
+    <string name="prefs_battery_disabled">Vypnutá</string>
+    <string name="prefs_more_foreground">Zapnutý</string>
+    <string name="prefs_more_background">P2P správy iba počas spánku</string>
+    <string name="prefs_more_off">Vypnutý (iba internetové správy)</string>
+    <string name="prefs_cpt_settings_title">P2P režim</string>
+    <string name="prefs_workaround_title">Zobuď spiace Wi-Fi</string>
+    <string name="prefs_workaround_summary">Na pár sekúnd rozsvieti obrazovku počas spánku</string>
+    <string name="prefs_battery_optimization_title">Optimalizácia pri zapnutom Wi-Fi</string>
+    <string name="prefs_wifi_policy_title">Wi-Fi počas spánku ponechať aktívne</string>
+    <string name="prefs_wifi_always">Vždy</string>
+    <string name="prefs_wifi_if_connected">Iba počas nabíjania</string>
+    <string name="prefs_wifi_never">Nikdy</string>
+    <string name="prefs_category_privacy_title">Súkromie</string>
+    <string name="prefs_internet_server_title">Používať internetový server</string>
+    <string name="prefs_internet_server_summary">Správy sa budú posielať aj cez WiFON server</string>
+    <string name="prefs_display_info_summary">Zdielať moje meno a polohu v detaile správy</string>
+    <string name="prefs_display_info_title">Informácie o zariadení</string>
+    <string name="prefs_show_me_as_friend_title">Zobrazuj ma medzi priateľmi</string>
+    <string name="prefs_show_me_as_friend_summary">Ostatní uvidia, kto si ťa pridal medzi priateľov</string>
+
+    <string name="profile_et_name_hint">Meno alebo prezývka</string>
+    <string name="profile_et_status_hint">Čo máš na mysli?</string>
+    <string name="profile_dialog_photo_title">Zvoľ si profilový obrázok</string>
+    <string name="profile_dialog_photo_opt_one">Odfotiť</string>
+    <string name="profile_dialog_photo_opt_two">Vybrať z galérie</string>
+    <string name="profile_unknown_name">Neznámy používateľ</string>
+    <string name="invite_profile_text">Ahoj, klikni na %1$s a pridaj si ma medzi priateľov! %2$s.</string>
+    <string name="invite_profile_subject">%1$s: Žiadosť o priateľstvo od používateľa %2$s</string>
+    <string name="dialog_invite_profile_title">Žiadosť o priateľstvo</string>
+    <string name="dialog_invite_profile_text">Pridať používateľa %1$s medzi priateľov?</string>
+    <string name="dialog_invite_profile_possitive">Pridať</string>
+    <string name="dialog_invite_profile_negative">Zrušiť</string>
+    <string name="toast_comment_old_status">Komentovať môžeš iba tvoj aktuálny status</string>
+    <string name="toast_image_error">Nastal problém pri načítaní súboru</string>
+    <string name="toast_my_profile_changed">Profil uložený</string>
+    <string name="toast_empty_profiles">Používateľ %1$s nemá žiadných priateľov!</string>
+    <string name="toast_error_name">Zadané meno je v nesprávnom formáte!</string>
+    <string name="toast_error_open_file">Tento súbor nie je možné otvoriť!</string>
+    <string name="toast_menu_favourites_removed">%1$s bude umiestnený v záložke \"Neznámi\"</string>
+    <string name="toast_menu_nearby_favourites">%1$s je odteraz tvoj priateľ!</string>
+    <string name="toast_menu_blocked_addded">Aktivity používateľa %1$s odteraz neuvidíš</string>
+    <string name="toast_menu_blocked_removed">Aktivity používateľa %1$s opäť uvidíš</string>
+    <string name="toast_status_created">Status vytvorený, ostatní ho uvidia po uložení profilu</string>
+    <string name="toast_status_changed">Status zmenený, ostatní ho uvidia po uložení profilu</string>
+    <string name="toast_delete">Správa bola odstranená</string>
+    <string name="toast_delete_already_send">Správa bola odstranená, ale jej kopia sa už odoslala %1$s</string>
+    <string name="toast_delete_recipient">prijemcovi</string>
+    <string name="toast_delete_server">na server</string>
+    <string name="toast_delete_other_device">na iné zariadenie</string>
+    <string name="toast_share_problem">Chyba pri zdieľaní aplikácie</string>
+    <string name="toast_profile_show_vote_send">Označil si, že sa ti páči tento status</string>
+    <string name="write_message">Napíš správu</string>
+    <string name="write_comment">Napíš komentár</string>
+
+
+    <plurals name="mesage_voteup_big_style">
+        <item quantity="one">Používateľovi %1$s sa páči tvoj status %2$s</item>
+        <item quantity="two">Používateľom %1$s a %2$s sa páči %3$s</item>
+        <item quantity="few">Používateľom %1$s a %2$s sa páči %3$s</item>
+    </plurals>
+
+    <plurals name="mesage_comment_big_style">
+        <item quantity="one">%2$s komentoval tvoj status %1$s</item>
+        <item quantity="two">%2$s a %3$s komentovali tvoj status %1$s</item>
+        <item quantity="few">%2$s a %3$s komentovali tvoj status %1$s</item>
+    </plurals>
+
+    <plurals name="mesage_voteup_incoming">
+        <item quantity="one"><![CDATA[Používateľovi %1$s sa páči tvoj status  <br />  <b> %2$s </b>]]></item>
+        <item quantity="other">Používateľovi %1$s označil že sa mu páči %2$s, %3$s a %4$s</item>
+    </plurals>
+    <plurals name="mesage_voteup_outgoing">
+        <item quantity="one"><![CDATA[Označil si, že sa ti páči status používateľa %1$s: <br /> <b> %2$s </b>]]></item>
+        <item quantity="other">Označil si, že sa ti páčia %1$s statusy: %2$s, %3$s a %4$s</item>
+    </plurals>
+    <plurals name="mesage_file_outgoing">
+        <item quantity="one">Súbor %1$s odoslaný používateľovi %2$s</item>
+    </plurals>
+
+    <plurals name="notif_message_title_plural">
+        <item quantity="one">%1$d nová konverzácia&#8230;</item>
+        <item quantity="two">%1$d nové konverzácie&#8230;</item>
+        <item quantity="few">%1$d nové konverzácie&#8230;</item>
+        <item quantity="other">%1$d nových konverzácií&#8230;</item>
+    </plurals>
+
+
+    <plurals name="notif_voteup_title">
+        <item quantity="one">%1$s nový lajk!</item>
+        <item quantity="few">%1$d nové lajky! </item>
+        <item quantity="other">%1$d nových lajkov!</item>
+    </plurals>
+
+
+    <plurals name="notif_voteup_big_style_text_body">
+    <item quantity="one">%1$s,%2$s \u0020 a %3$d ti poslali palec hore</item>
+    <item quantity="other">%1$s,%2$s \u0020 a %3$d iných ti poslali palec hore</item>
+   </plurals>
+
+    <plurals name="notif_comment_big_style_text_body">
+        <item quantity="one">%2$s, %3$s \u0020a %4$d ďalší komentovali tvoj status 1$s</item>
+        <item quantity="other">%2$s, %3$s \u0020a %4$d ďalší komentovali tvoj status 1$s</item>
+    </plurals>
+
+    <plurals name="notif_message_one_user_many_text">
+        <item quantity="two">%1$d nové správy</item>
+        <item quantity="few">%1$d nové správy</item>
+        <item quantity="other">%1$d nových správ</item>
+    </plurals>
+
+    <plurals name="notif_comment_title">
+        <item quantity="one">%1$d nový komentár na tvoj status %2$s</item>
+        <item quantity="few">%1$d nové komentáre na tvoj status %2$s</item>
+        <item quantity="other">%1$d nových komentárov na tvoj status %2$s</item>
+    </plurals>
+
+    <string name="title_activity_cpt_settings">Nastavenia WiFON-u</string>
+    <string name="message_add_new_status">Pridaj nový status</string>
+</resources>

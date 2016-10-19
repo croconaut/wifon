@@ -1,0 +1,29 @@
+<LinearLayout android:id="@+id/bottomDateBar"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <ImageView
+        android:id="@+id/messageState"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:scaleType="centerInside"
+        android:src="@drawable/time" />
+
+    <TextView
+        android:id="@+id/messageTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="00:15"
+        android:textColor="#fff" />
+
+    <ImageView
+        android:id="@+id/messageError"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="3dp"
+        android:scaleType="centerInside"
+        android:src="@drawable/error"
+        android:visibility="gone" />
+</LinearLayout>

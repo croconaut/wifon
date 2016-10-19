@@ -1,0 +1,64 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single"
+        android:id="@+id/appNavigationGroup">
+        <item
+            android:id="@+id/timeline"
+            android:checked="true"
+            android:icon="@drawable/ic_action_timeline"
+            android:title="@string/action_bar_title_timeline"
+            android:checkable="false"/>
+        <item
+            android:id="@+id/people"
+            android:icon="@drawable/ic_action_neaby"
+            android:title="@string/drawer_item_people"
+            android:checkable="false"/>
+    </group>
+
+    <group android:checkableBehavior="single"
+        android:id="@+id/settingsGroup">
+        <item
+            android:id="@+id/settings"
+            android:icon="@drawable/ic_action_menu_settings"
+            android:title="@string/action_settings"
+            android:checkable="false"/>
+    </group>
+
+    <group android:checkableBehavior="single"
+           android:id="@+id/shareGroup">
+        <item
+            android:id="@+id/writeToCeo"
+            android:icon="@drawable/contact"
+            android:title="@string/action_write_ceo"
+            android:checkable="false"/>
+
+        <item
+            android:id="@+id/share"
+            android:icon="@drawable/ic_action_share"
+            android:title="@string/action_share"
+            android:checkable="false"/>
+
+        <item
+            android:id="@+id/inviteFriend"
+            android:icon="@drawable/ic_person_add"
+            android:title="@string/action_invite_friend"
+            android:checkable="false"/>
+
+    </group>
+
+    <group android:checkableBehavior="single"
+           android:id="@+id/miscelaneousGroup">
+
+        <item
+            android:id="@+id/reportBug"
+            android:icon="@drawable/ic_action_report_bug"
+            android:title="@string/action_report_bug"
+            android:checkable="false"/>
+
+        <item
+            android:id="@+id/about"
+            android:icon="@drawable/ic_action_menu_info"
+            android:title="@string/action_about"
+            android:checkable="false"/>
+    </group>
+
+</menu>

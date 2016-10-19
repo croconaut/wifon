@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <com.croconaut.ratemebuddy.ui.preferences.MyPreferenceCategory android:title="@string/prefs_more_settings">
+        <Preference
+            android:defaultValue="0"
+            android:key="prefs_more"
+            android:summary="%s"
+            android:title="@string/prefs_cpt_settings_title"/>
+    </com.croconaut.ratemebuddy.ui.preferences.MyPreferenceCategory>
+
+    <com.croconaut.ratemebuddy.ui.preferences.MyPreferenceCategory android:title="@string/prefs_performance"/>
+
+</PreferenceScreen>

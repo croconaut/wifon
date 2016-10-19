@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="about_attributions_hint">Used components:</string>
+    <string name="action_about">About the app</string>
+    <string name="action_back">Back</string>
+    <string name="action_bar_title_my_profile">My Profile</string>
+    <string name="action_bar_title_timeline">Timeline</string>
+    <string name="action_drawer_bb_favourites">Friends</string>
+    <string name="action_drawer_favourites">Friends (%1$d)</string>
+    <string name="action_drawer_nearby">Nearby</string>
+    <string name="action_drawer_unknown">Unknown</string>
+    <string name="action_drawer_unread">Unread</string>
+    <string name="action_invite_friend">Invite a friend</string>
+    <string name="action_report_bug">Report a bug</string>
+    <string name="action_settings">Settings</string>
+    <string name="action_share">Share WiFON</string>
+    <string name="action_sort_alphabetically">Sort alphabetically</string>
+    <string name="action_sort_favourites">Sort favourites first</string>
+    <string name="action_sort_rating">Sort by likes</string>
+    <string name="action_write_ceo">Write to the CEO</string>
+    <string name="activity_change_status">Change status</string>
+    <string name="activity_create_profile">Your profile</string>
+    <string name="activity_display_title_friends">Friends</string>
+    <string name="activity_display_title_likes">People who like it</string>
+    <string name="app_name">WiFON</string>
+    <string name="attachment_delivered_at">Delivered at %1$s</string>
+    <string name="attachment_seen_at">Seen at %1$s</string>
+    <string name="attribution_freepik">Profile title pictures - Designed by Freepik.com</string>
+    <string name="attribution_image_chooser">Image chooser library. Copyright 2013 Kumar Bibek. https://github.com/coomar2841/image-chooser-library</string>
+    <string name="attribution_pattern1">Swirl by Uday. subtlepatterns.com</string>
+    <string name="attribution_pattern2">GPlay by Dimitrie Hoekstra. subtlepatterns.com</string>
+    <string name="attribution_pattern3">Gray Floral by Lauren. subtlepatterns.com</string>
+    <string name="attribution_pattern4">Symphony by Irfan iLias. subtlepatterns.com</string>
+    <string name="attribution_pattern5">Skulls by Adam. subtlepatterns.com</string>
+    <string name="attribution_soundcloud">Android-crop library. Copyright 2015 SoundCloud. https://github.com/jdamcd/android-crop</string>
+    <string name="attribution_text_drawable">Text Drawable library. Copyright Amulya Khare. https://github.com/amulyakhare/TextDrawable</string>
+    <string name="cancel">Cancel</string>
+    <string name="ceo_name">CEO</string>
+    <string name="content_desc_list_pref_check">Tap to check</string>
+    <string name="content_desc_logo">App logo</string>
+    <string name="content_desc_photo">User picture</string>
+    <string name="dialog_about_trademark" translatable="false"><![CDATA[Copyright © <a href=\"https://wifon.sk\">WiFON</a> 2014-2016]]></string>
+    <string name="dialog_about_version">Version %1$s.%2$s</string>
+    <string name="dialog_download_btn_download">Download</string>
+    <string name="dialog_download_btn_not_download">Don\'t download</string>
+    <string name="dialog_download_btn_only_wifi_download">Download on Wi-Fi only</string>
+    <string name="dialog_download_rb_all_for_future">All files (in future, too)</string>
+    <string name="dialog_download_rb_only_this">This file only</string>
+    <string name="dialog_download_rb_this_and_other">This and other files (%1$d ; %2$s)</string>
+    <string name="dialog_invite_profile_negative">Cancel</string>
+    <string name="dialog_invite_profile_possitive">Add</string>
+    <string name="dialog_invite_profile_text">Add %1$s as a friend?</string>
+    <string name="dialog_invite_profile_title">Friend request</string>
+    <string name="dialog_no_blocked_users">Nobody has been blocked</string>
+    <string name="dialog_upload_btn_not_upload">Don\'t upload</string>
+    <string name="dialog_upload_btn_only_wifi_upload">Upload on Wi-Fi only</string>
+    <string name="dialog_upload_btn_upload">Upload</string>
+    <string name="dialog_upload_rb_all_for_future">All files (in the future, too)</string>
+    <string name="dialog_wifon_messege">Wi-Fi is off, WiFON can\'t receive nor send your messages</string>
+    <string name="dialog_wifon_negative">Ignore</string>
+    <string name="dialog_wifon_positive">Turn Wi-Fi on</string>
+    <string name="drawer_item_people">People</string>
+    <string name="emptyFavourites">Star someone as a friend!</string>
+    <string name="emptyHistoryText">This is WiFON. It works like a classic Messenger but messages get delivered even without Internet connectivity, really! If you like, you can gather likes for your statuses.</string>
+    <string name="emptyNearby">This is where nearby users will be shown</string>
+    <string name="emptyUnknown">This is where messages from unknown users will be shown</string>
+    <string name="emptyUnread">This is where unread messages will be shown</string>
+    <string name="header_friends_count_hint">Friends [%1$s]:</string>
+    <string name="hop_export_error">GPX export has failed</string>
+    <string name="hop_install">Install</string>
+    <string name="hop_installEarth">Google Earth not installed</string>
+    <string name="hop_title">Installation needed!</string>
+    <string name="hops_address_not_found">Detailed description is not available</string>
+    <string name="hops_not_enough_addresses">Insufficient addresses to show</string>
+    <string name="hops_title">Message visited following places</string>
+    <string name="invite_profile_subject">%1$s: Friend request from %2$s</string>
+    <string name="invite_profile_text">Hi, click on %1$s and add me as your friend! %2$s.</string>
+    <string name="message_add_new_status">Add new status</string>
+    <string name="message_deleted">Message couldn\'t have been delivered</string>
+    <string name="message_detail_hop_archived">Pending for delivery confirmation, the route will be displayed here.</string>
+    <string name="message_detail_view_on_earth">Tap to show in Google Earth</string>
+    <string name="message_download_state_cancelled">Download cancelled</string>
+    <string name="message_download_state_downloading">Download in progress</string>
+    <string name="message_download_state_finished">Downloaded</string>
+    <string name="message_download_state_waiting_for_confirm">Waiting for confirmation</string>
+    <string name="message_download_state_waiting_for_download">Waiting for download</string>
+    <string name="message_menu_copy">Copy message text</string>
+    <string name="message_menu_copy_toast">Message text copied</string>
+    <string name="message_menu_delete">Delete</string>
+    <string name="message_menu_details">Show detail</string>
+    <string name="message_menu_resend">Forward</string>
+    <string name="message_not_delivered">Waiting for delivery</string>
+    <string name="message_these_people_liked">People who like it:</string>
+    <string name="message_timeline_comment_incoming">%1$s has commented your status: &lt;br /> &lt;b> %2$s &lt;/b></string>
+    <string name="message_timeline_comment_outgoing">You has commented on %1$s\'s status: &lt;br /> &lt;b> %2$s &lt;/b></string>
+    <string name="message_timeline_file_accepted">File %1$s downloaded</string>
+    <string name="message_timeline_intro">Welcome %1$s. This is your timeline. You\'ll find status changes of your friends, along with the files and likes you\'ve received.</string>
+    <string name="message_upload_state_cancelled">Upload cancelled</string>
+    <string name="message_upload_state_uploaded_to_recipient">Uploaded to recipient</string>
+    <string name="message_upload_state_uploaded_to_server">Uploaded to server</string>
+    <string name="message_upload_state_uploading">Upload in progress</string>
+    <string name="message_upload_state_waiting_for_upload">Waiting for upload</string>
+    <string name="message_new_hint">New message!</string>
+    <string name="comment_new_hint">New comment!</string>
+    <string name="no_statuses">No previous statuses</string>
+    <string name="notif_first_time_nearby_text">Tap to see the complete list</string>
+    <string name="notif_first_time_nearby_title">%1$s is nearby!</string>
+    <string name="notif_old_comment_title">Comment to an old status received!</string>
+    <string name="predifined_et_text_content">Hi %1$s! I\'ve accepted your friend request. Regards %2$s :)</string>
+    <string name="prefs_advanced_settings_sum">Change Wi-Fi communication settings</string>
+    <string name="prefs_advanced_settings_title">Wi-Fi settings</string>
+    <string name="prefs_battery_disabled">Disabled</string>
+    <string name="prefs_battery_enabled">Enabled</string>
+    <string name="prefs_battery_optimization_title">Optimization while Wi-Fi on</string>
+    <string name="prefs_blocked_users_sum">Blocked people</string>
+    <string name="prefs_blocked_users_title">Blocked people</string>
+    <string name="prefs_category_privacy_title">Privacy</string>
+    <string name="prefs_color_blue">Blue</string>
+    <string name="prefs_color_green">Green</string>
+    <string name="prefs_color_orange">Orange</string>
+    <string name="prefs_color_pink">Pink</string>
+    <string name="prefs_color_red">Red</string>
+    <string name="prefs_color_scheme_sum">Colour of UI components</string>
+    <string name="prefs_color_scheme_title">Colour theme</string>
+    <string name="prefs_cpt_settings_title">P2P mode</string>
+    <string name="prefs_display_info_summary">Share my name and position in message\'s detail</string>
+    <string name="prefs_display_info_title">Device information</string>
+    <string name="prefs_enable_notifi_sound_title">Allow sound notifications</string>
+    <string name="prefs_enable_notifi_sum">Allow system tray notifications</string>
+    <string name="prefs_enable_notifi_title">Enable notifications</string>
+    <string name="prefs_internet_server_summary">Messages will use WiFON server as another peer</string>
+    <string name="prefs_internet_server_title">Use Internet server</string>
+    <string name="prefs_message_off_warning">You\'ll be receiving only messages sent via Internet and nobody will see you nearby</string>
+    <string name="prefs_message_workaround_recommended">We recommend to have this enabled else you may not receive any messages!</string>
+    <string name="prefs_more_background">P2P messages only during display off</string>
+    <string name="prefs_more_foreground">Enabled</string>
+    <string name="prefs_more_off">Disabled (use Internet messages only)</string>
+    <string name="prefs_more_settings">Advanced</string>
+    <string name="prefs_notifi_nearby_sum">Notify if somebody shows up nearby after a while</string>
+    <string name="prefs_notifi_nearby_title">Notification about nearby people</string>
+    <string name="prefs_notifi_sound_ringtone_sum">Choose custom sound notifications</string>
+    <string name="prefs_notifi_sound_ringtone_title">Custom notification</string>
+    <string name="prefs_notifi_title">Notifications</string>
+    <string name="prefs_notifi_vibrate_title">Vibration</string>
+    <string name="prefs_performance">Wi-Fi parameters</string>
+    <string name="prefs_show_me_as_friend_summary">Others will see who added you as a friend</string>
+    <string name="prefs_show_me_as_friend_title">Show me in the friend list</string>
+    <string name="prefs_ui_title">UI</string>
+    <string name="prefs_wifi_always">Always</string>
+    <string name="prefs_wifi_if_connected">Only if connected charger</string>
+    <string name="prefs_wifi_never">Never</string>
+    <string name="prefs_wifi_policy_title">Wi-Fi active during display off</string>
+    <string name="prefs_workaround_summary">Wakes up display for couple of seconds</string>
+    <string name="prefs_workaround_title">Wake up Wi-Fi during display off</string>
+    <string name="profile_dialog_photo_opt_one">Take a picture</string>
+    <string name="profile_dialog_photo_opt_two">Choose from gallery</string>
+    <string name="profile_dialog_photo_title">Choose your profile picture</string>
+    <string name="profile_et_name_hint">Name or nickname</string>
+    <string name="profile_et_status_hint">What\'s on your mind?</string>
+    <string name="profile_unknown_name">Unknown user</string>
+    <string name="toast_comment_old_status">Comments are allowed only on current status</string>
+    <string name="toast_delete">Message deleted</string>
+    <string name="toast_delete_already_send">Message deleted but its copy has been already sent to %1$s</string>
+    <string name="toast_delete_other_device">to another device</string>
+    <string name="toast_delete_recipient">to the recipient</string>
+    <string name="toast_delete_server">to the server</string>
+    <string name="toast_empty_profiles">%1$s hasn\'t added any friends</string>
+    <string name="toast_error_name">Name is not properly typed!</string>
+    <string name="toast_error_open_file">This file has failed to open!</string>
+    <string name="toast_image_error">A problem with reading the file has occured</string>
+    <string name="toast_menu_blocked_addded">You aren\'t going to see any activities from %1$s</string>
+    <string name="toast_menu_blocked_removed">You are going to see activities from %1$s again</string>
+    <string name="toast_menu_favourites_removed">%1$s will be placed in \"Unknown\"</string>
+    <string name="toast_menu_nearby_favourites">%1$s is now your friend!</string>
+    <string name="toast_my_profile_changed">Profile saved</string>
+    <string name="toast_profile_show_vote_send">You\'ve liked this status</string>
+    <string name="toast_share_problem">An error by sharing the app has occured</string>
+    <string name="toast_status_changed">Status has been changed, it will become visible after you save the profile</string>
+    <string name="toast_status_created">Status has been created, it will become visible after you save the profile</string>
+    <string name="write_comment">Type a comment</string>
+    <string name="write_message">Type a message</string>
+
+    <plurals name="mesage_voteup_big_style">
+        <item quantity="one">%1$s likes your status %2$s</item>
+        <item quantity="two">%1$s and %2$s like %3$s</item>
+        <item quantity="few">%1$s and %2$s like %3$s</item>
+        <item quantity="other">%1$s and %2$s like %3$s</item>
+    </plurals>
+
+    <plurals name="mesage_comment_big_style">
+        <item quantity="one">%2$s has commented on your status %1$s</item>
+        <item quantity="two">%2$s and %3$s have commented on your status %1$s</item>
+        <item quantity="few">%2$s and %3$s have commented on your status %1$s</item>
+    </plurals>
+
+    <plurals name="mesage_voteup_incoming">
+        <item quantity="one"><![CDATA[%1$s likes your status  <br />  <b> %2$s </b>]]></item>
+        <item quantity="other">%1$s likes %2$s, %3$s and %4$s</item>
+    </plurals>
+    <plurals name="mesage_voteup_outgoing">
+        <item quantity="one"><![CDATA[You like %1$s\'s status: <br /> <b> %2$s </b>]]></item>
+        <item quantity="other">You like %1$s statuses: %2$s, %3$s a %4$s</item>
+    </plurals>
+    <plurals name="mesage_file_outgoing">
+        <item quantity="one">File %1$s sent to %2$s</item>
+    </plurals>
+
+    <plurals name="notif_message_title_plural">
+        <item quantity="one">%1$d new conversation&#8230;</item>
+        <item quantity="two">%1$d new conversations&#8230;</item>
+        <item quantity="few">%1$d new conversations&#8230;</item>
+        <item quantity="other">%1$d new conversations&#8230;</item>
+    </plurals>
+
+
+    <plurals name="notif_voteup_title">
+        <item quantity="one">%1$s new like!</item>
+        <item quantity="few">%1$d new likes! </item>
+        <item quantity="other">%1$d new likes!</item>
+    </plurals>
+
+
+    <plurals name="notif_voteup_big_style_text_body">
+        <item quantity="one">%1$s,%2$s \u0020 and %3$d has liked your status</item>
+        <item quantity="other">%1$s,%2$s \u0020 and %3$d others have liked your status</item>
+    </plurals>
+
+    <plurals name="notif_comment_big_style_text_body">
+        <item quantity="one">%2$s, %3$s \u0020and %4$d more have commented on your status 1$s</item>
+        <item quantity="other">%2$s, %3$s \u0020and %4$d more have commented on status 1$s</item>
+    </plurals>
+
+    <plurals name="notif_message_one_user_many_text">
+        <item quantity="one">%1$d new message</item>
+        <item quantity="two">%1$d new messages</item>
+        <item quantity="few">%1$d new messages</item>
+        <item quantity="other">%1$d new messages</item>
+    </plurals>
+
+    <plurals name="notif_comment_title">
+        <item quantity="one">%1$d new comment on status %2$s</item>
+        <item quantity="few">%1$d new comments on status %2$s</item>
+        <item quantity="other">%1$d new comments on status %2$s</item>
+    </plurals>
+    <string name="dialog_about_mail_croco" translatable="false">developer@wifon.sk</string>
+    <string name="dialog_wifon_title" translatable="false">WiFON</string>
+    <string name="facebook_app_id" translatable="false">857593817655528</string>
+    <string name="hops_title_cannot_show">The list of places which this message passed through will be shown here.</string>
+    <string name="message_ack_time_at">Seen at %1$s</string>
+    <string name="message_attachment_detail_mod_time">Last modification time: %1$s</string>
+    <string name="message_attachment_detail_name">Name: %1$s</string>
+    <string name="message_attachment_detail_size">Size: %1$s</string>
+    <string name="message_attachment_detail_transfer_speed">Transfer speed: %1$s</string>
+    <string name="message_attachment_transfer_in">Transfer time: %1$s</string>
+    <string name="message_came_up_time_at">Arrived in %1$s</string>
+    <string name="message_delivered_time_at">Delivered in %1$s</string>
+    <string name="message_received_time_at">Delivered at %1$s</string>
+    <string name="message_time_error">Incorrectly set time (difference: %1$s)</string>
+    <string name="message_timeline_status_changed">You have set new status: %1$s.</string>
+    <string name="message_timeline_photo_changed">You have set a new profile picture.</string>
+    <string name="message_timeline_name_changed">You have set a new name: %1$s.</string>
+    <string name="message_sent_first_time_at">First time sent at %1$s</string>
+    <string name="message_sent_last_time_at">Last time sent at %1$s</string>
+    <string name="message_sent_to_other_device_at">Sent to a nearby device at %1$s</string>
+    <string name="message_sent_to_server_at">Sent to the server at %1$s</string>
+    <string name="message_sent_to_user_at">Sent to the user\'s device at %1$s</string>
+    <string name="message_written_at">Written at %1$s</string>
+    <string name="prefs_notifi_vibrate_sum"></string>
+    <string name="prefs_enable_notifi_sound_sum"></string>
+    <string name="message_attachment_preview_title">New file</string>
+    <string name="message_timeline_status_changed_remote"><![CDATA[User <b>%1$s</b> has changed his status to: <b>%2$s</b>]]></string>
+    <string name="title_activity_cpt_settings">WiFON Settings</string>
+</resources>

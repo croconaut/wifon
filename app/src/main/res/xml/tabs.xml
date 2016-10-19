@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<tabs>
+    <tab
+        icon="@drawable/ic_bb_favourites"
+        id="@+id/bb_menu_favorites"
+        title="@string/action_drawer_bb_favourites"
+        inActiveColor="#FFFFFF"
+        activeColor="#FFFFFF"
+        badgeBackgroundColor="#FF0000" />
+    <tab
+        icon="@drawable/ic_bb_nearby"
+        id="@+id/bb_menu_nearby"
+        title="@string/action_drawer_nearby"
+        inActiveColor="#FFFFFF"
+        activeColor="#FFFFFF"
+        badgeBackgroundColor="#FF0000" />
+    <tab
+        icon="@drawable/ic_bb_unknown"
+        id="@+id/bb_menu_unknown"
+        title="@string/action_drawer_unknown"
+        inActiveColor="#FFFFFF"
+        activeColor="#FFFFFF"
+        badgeBackgroundColor="#FF0000" />
+    <tab
+        icon="@drawable/ic_bb_unread"
+        id="@+id/bb_menu_unread"
+        title="@string/action_drawer_unread"
+        inActiveColor="#FFFFFF"
+        activeColor="#FFFFFF"
+        badgeBackgroundColor="#FF0000" />
+
+</tabs>

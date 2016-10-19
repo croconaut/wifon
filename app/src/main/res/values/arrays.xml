@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="colorNames">
+        <item name="0">@string/prefs_color_red</item>
+        <item name="1">@string/prefs_color_green</item>
+        <item name="2">@string/prefs_color_blue</item>
+        <item name="3">@string/prefs_color_orange</item>
+        <item name="4">@string/prefs_color_pink</item>
+    </string-array>
+
+
+    <string-array name="attributions">
+        <item name="0">@string/attribution_freepik</item>
+        <item name="1">@string/attribution_pattern1</item>
+        <item name="2">@string/attribution_pattern2</item>
+        <item name="3">@string/attribution_pattern3</item>
+        <item name="4">@string/attribution_pattern4</item>
+        <item name="5">@string/attribution_pattern5</item>
+        <item name="6">@string/attribution_soundcloud</item>
+        <item name="7">@string/attribution_image_chooser</item>
+        <item name="8">@string/attribution_text_drawable</item>
+    </string-array>
+    <string-array name="moreSettings">
+        <item name="0">@string/prefs_more_foreground</item>
+        <item name="1">@string/prefs_more_background</item>
+        <item name="2">@string/prefs_more_off</item>
+    </string-array>
+    <string-array name="wifiPolicySettings">
+        <item name="0">@string/prefs_wifi_never</item>
+        <item name="1">@string/prefs_wifi_if_connected</item>
+        <item name="2">@string/prefs_wifi_always</item>
+    </string-array>
+</resources>

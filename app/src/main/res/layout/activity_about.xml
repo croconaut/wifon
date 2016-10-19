@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout android:id="@+id/drawerLayout"
+                                        xmlns:android="http://schemas.android.com/apk/res/android"
+                                        xmlns:app="http://schemas.android.com/apk/res-auto"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:background="@color/material_white">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent">
+
+        <android.support.design.widget.AppBarLayout
+            android:id="@+id/toolBarLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:paddingBottom="16dp">
+
+            <include
+                android:id="@+id/toolBar"
+                layout="@layout/toolbar"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/toolbar_margin_top"/>
+
+            <TextView
+                android:id="@+id/tvAppName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/toolBarLayout"
+                android:layout_centerHorizontal="true"
+                android:paddingTop="6dp"
+                android:text="@string/app_name"
+                android:textColor="@color/material_white"
+                android:textSize="35dp"/>
+
+            <TextView
+                android:id="@+id/tvVersion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvAppName"
+                android:layout_centerHorizontal="true"
+                android:text="@string/dialog_about_version"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/material_white"/>
+
+            <TextView
+                android:id="@+id/tvTradeMark"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvVersion"
+                android:layout_centerHorizontal="true"
+                android:text="@string/dialog_about_trademark"
+                android:textAppearance="?android:attr/textAppearanceSearchResultSubtitle"
+                android:textColor="@color/material_white"
+                android:textColorLink="@color/material_white"/>
+
+            <TextView
+                android:id="@+id/tvMailCroco"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvTradeMark"
+                android:layout_centerHorizontal="true"
+                android:autoLink="email"
+                android:paddingBottom="5dp"
+                android:text="@string/dialog_about_mail_croco"
+                android:textAppearance="?android:attr/textAppearanceSearchResultSubtitle"
+                android:textColor="@color/material_white"
+                android:textColorLink="@color/material_white"/>
+        </android.support.design.widget.AppBarLayout>
+
+        <TextView
+            android:id="@+id/attributionsHint"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/toolBarLayout"
+            android:paddingBottom="8dp"
+            android:paddingLeft="32dp"
+            android:paddingTop="12dp"
+            android:text="@string/about_attributions_hint"
+            android:textSize="16sp"/>
+
+        <ListView
+            android:id="@+id/attributions"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/attributionsHint"
+            android:paddingBottom="6dp"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"/>
+
+    </RelativeLayout>
+
+    <android.support.design.widget.NavigationView
+        android:id="@+id/navigationView"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:fitsSystemWindows="true"
+        app:headerLayout="@layout/drawer_header"
+        app:menu="@menu/drawer"/>
+
+</android.support.v4.widget.DrawerLayout>

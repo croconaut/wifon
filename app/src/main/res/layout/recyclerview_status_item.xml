@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="16dp"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:id="@+id/rlStatusView"
+    android:background="?attr/selectableItemBackground">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tvStatus"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:textSize="20dp"/>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/statusStats"
+        android:layout_below="@+id/tvStatus"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="12dp">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/likeIcon"
+            android:src="?attr/iconLikes"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvLikes"
+            android:textSize="20sp"
+            android:textColor="?attr/colorPrimaryDark"
+            android:layout_toRightOf="@+id/likeIcon"
+            android:paddingLeft="6dp"
+            android:layout_marginBottom="4dp"
+            android:layout_marginTop="-2dp"
+            android:text="10"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/commentIcon"
+            android:layout_toRightOf="@+id/tvLikes"
+            android:layout_marginLeft="32dp"
+            android:src="?attr/iconComments"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvComments"
+            android:textSize="20sp"
+            android:textColor="?attr/colorPrimaryDark"
+            android:layout_toRightOf="@+id/commentIcon"
+            android:paddingLeft="6dp"
+            android:layout_marginBottom="4dp"
+            android:layout_marginTop="-2dp"
+            android:text="12"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:id="@+id/divider"
+        android:background="@color/material_grey_200"
+        android:layout_alignParentBottom="true" />
+
+</RelativeLayout>

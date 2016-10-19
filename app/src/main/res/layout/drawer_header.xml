@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@+id/drawerHeader"
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/ivCoverDrawer"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:scaleType="centerCrop"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:background="@color/semi_transparent"
+        android:paddingBottom="8dp">
+
+        <ImageView
+            android:id="@+id/ivPhotoDrawer"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="48dp"/>
+
+        <TextView
+            android:id="@+id/tvNameDrawer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/ivPhotoDrawer"
+            android:layout_marginBottom="16dp"
+            android:layout_toRightOf="@+id/ivPhotoDrawer"
+            android:singleLine="true"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:text="Name"
+            android:textColor="@color/material_white"
+            android:textSize="22sp"/>
+
+        <TextView
+            android:id="@+id/tvStatusDrawer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/tvNameDrawer"
+            android:layout_below="@+id/tvNameDrawer"
+            android:layout_marginTop="-12dp"
+            android:ellipsize="end"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:singleLine="true"
+            android:text="Statuuuus"
+            android:textColor="@color/material_white"
+            android:textSize="18sp"/>
+
+        <RelativeLayout
+            android:id="@+id/rlStatusStatsDrawer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvStatusDrawer"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:layout_marginTop="9dp"
+            android:layout_toRightOf="@+id/ivPhotoDrawer"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp">
+
+            <ImageView
+                android:id="@+id/likeIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_thumb_up_white_24dp"/>
+
+            <TextView
+                android:id="@+id/tvLikesDrawer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="4dp"
+                android:layout_marginTop="-2dp"
+                android:layout_toRightOf="@+id/likeIcon"
+                android:paddingLeft="6dp"
+                android:textColor="@color/material_white"
+                android:textSize="20sp"/>
+
+            <ImageView
+                android:id="@+id/commentIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_toRightOf="@+id/tvLikesDrawer"
+                android:src="@drawable/ic_comment_white_24dp"/>
+
+            <TextView
+                android:id="@+id/tvCommentsDrawer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="4dp"
+                android:layout_marginTop="-2dp"
+                android:layout_toRightOf="@+id/commentIcon"
+                android:paddingLeft="6dp"
+                android:textColor="@color/material_white"
+                android:textSize="20sp"/>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

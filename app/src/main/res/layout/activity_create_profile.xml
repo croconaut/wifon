@@ -1,0 +1,96 @@
+<ScrollView
+    android:id="@+id/scrollView1"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:fillViewport="true"
+    android:stackFromBottom="true"
+    android:transcriptMode="alwaysScroll"
+    android:windowSoftInputMode="stateHidden">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:descendantFocusability="beforeDescendants"
+        android:focusable="false"
+        android:focusableInTouchMode="false">
+
+        <android.support.design.widget.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/toolBarLayout">
+            <include
+                android:id="@+id/toolBar"
+                layout="@layout/toolbar"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/toolbar_margin_top" />
+        </android.support.design.widget.AppBarLayout>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="133dp"
+            android:scaleType="centerCrop"
+            android:id="@+id/ivCover"
+            android:layout_below="@+id/toolBarLayout" />
+
+        <ImageView
+            android:id="@+id/ivImage"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_below="@+id/ivCover"
+            android:scaleType="centerCrop"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="-70dp" />
+
+        <EditText
+            android:id="@+id/etName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/profile_et_name_hint"
+            android:textColorHint="@color/material_grey_400"
+            android:textCursorDrawable="@drawable/text_cursor_cyan"
+            android:textSize="26sp"
+            android:layout_marginTop="24dp"
+            android:layout_marginLeft="32dp"
+            android:layout_marginRight="32dp"
+            android:layout_marginBottom="32dp"
+            android:ellipsize="start"
+            android:textColor="@color/material_grey_600"
+            android:textStyle="bold"
+            android:inputType="textCapWords|textCapSentences"
+            android:gravity="center_horizontal"
+            android:layout_below="@+id/ivImage"
+            android:backgroundTint="?colorPrimaryLight" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/statusContainer"
+            android:background="?attr/statusSelector"
+            android:padding="32dp"
+            android:layout_marginTop="12dp"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/etName">
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/etStatus"
+                android:hint="@string/profile_et_status_hint"
+                android:textColorHint="@color/material_grey_300"
+                android:textSize="26sp"
+                android:textColor="@color/material_white"
+                android:paddingBottom="12dp"
+                android:capitalize="sentences"
+                android:gravity="center_horizontal"
+                android:layout_marginLeft="32dp"
+                android:layout_marginRight="32dp"
+                android:layout_centerInParent="true"
+                android:background="@null" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</ScrollView>

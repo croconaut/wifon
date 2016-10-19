@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.croconaut.ratemebuddy">
+
+    <uses-feature android:name="android.hardware.camera" android:required="false" />
+
+    <uses-permission android:name="android.permission.WRITE_INTERNAL_STORAGE" />F
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.READ_PROFILE" />
+
+    <supports-screens android:anyDensity="true" />
+
+    <application
+        android:name=".AppData"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme"
+        tools:ignore="ExportedService">
+
+        <activity
+            android:name=".activities.SettingsActivity"
+            android:label="@string/action_settings"
+            android:theme="@style/Theme.AppCompat.Light" />
+        <!-- android:windowSoftInputMode="adjustPan" prevents getting focus -->
+        <activity
+            android:name=".activities.CreateProfileActivity"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".activities.EditProfileActivity"
+            android:launchMode="singleTask"
+            android:windowSoftInputMode="adjustPan" />
+
+        <activity
+            android:name=".activities.PeopleParentActivityBB"
+            android:exported="true"
+            android:launchMode="singleTask"
+            android:parentActivityName=".activities.TimelineActivity">
+
+            <intent-filter android:autoVerify="true">
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="http" />
+                <data android:scheme="https" />
+                <data android:host="wifon.sk" />
+                <data android:pathPattern=".*profiles.*" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activities.TimelineActivity" />
+        </activity>
+
+        <activity
+            android:name=".activities.ChangeStatusActivity"
+            android:parentActivityName=".activities.EditProfileActivity"
+            android:windowSoftInputMode="stateVisible">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.croconaut.ratemebuddy.activities.EditProfileActivity" />
+        </activity>
+        <activity
+            android:name=".activities.TimelineActivity"
+            android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activities.CommunicationActivity"
+            android:exported="true"
+            android:parentActivityName=".activities.TimelineActivity"
+            android:windowSoftInputMode="adjustPan">
+
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activities.TimelineActivity" />
+        </activity>
+        <activity android:name=".activities.MessageDetailActivity" />
+        <activity android:name=".activities.AboutActivity" />
+        <activity android:name=".activities.CommentActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activities.TimelineActivity" />
+        </activity>
+        <activity
+            android:name=".activities.CptSettingsActivity"
+            android:label="@string/title_activity_cpt_settings" />
+        <activity
+            android:name="com.soundcloud.android.crop.CropImageActivity"
+            android:theme="@style/Theme.AppCompat.Light" />
+
+        <receiver
+            android:name=".CptReceiver"
+            android:exported="true" />
+
+        <activity android:name=".activities.DisplayProfilesActivity" />
+    </application>
+
+</manifest>

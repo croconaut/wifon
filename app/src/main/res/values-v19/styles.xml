@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="AppBaseTheme" parent="@style/Theme.AppCompat.Light.NoActionBar">
+
+        <!-- API 19 theme customizations can go here. -->
+        <item name="android:titleTextStyle">@style/MyTheme.ActionBar.TitleTextStyle</item>
+        <item name="android:homeAsUpIndicator">@drawable/ic_action_drawer</item>
+    </style>
+</resources>

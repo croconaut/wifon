@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="3dp"
+                android:paddingLeft="32dp"
+                android:paddingRight="32dp">
+
+    <View
+        android:id="@+id/messageDayDivider"
+        android:layout_width="match_parent"
+        android:layout_height="2px"
+        android:layout_marginLeft="48dp"
+        android:layout_marginRight="48dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/line"/>
+
+    <TextView
+        android:id="@+id/messageDayStamp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/messageDayDivider"
+        android:layout_marginBottom="6dp"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="6dp"
+        android:textColor="@color/material_grey_600"
+        android:visibility="gone"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/messageDayStamp">
+
+        <ImageView
+            android:id="@+id/messagePhoto"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="12dp"
+            android:contentDescription="@string/content_desc_photo"
+            android:scaleType="centerCrop"/>
+
+        <RelativeLayout
+            android:id="@+id/bubbleLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp"
+            android:layout_marginTop="6dp"
+            android:layout_toRightOf="@+id/messagePhoto"
+            android:orientation="vertical"
+            android:paddingBottom="4dp"
+            android:paddingLeft="32dp"
+            android:paddingRight="32dp"
+            android:paddingTop="4dp">
+
+            <RelativeLayout
+                android:id="@+id/rlTextOrImage"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/messageText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:textColor="#fff"
+                    android:textSize="18sp"/>
+
+                <ImageView
+                    android:id="@+id/messageImage"
+                    android:layout_width="@dimen/attachment_size_width"
+                    android:layout_height="@dimen/attachment_size_height"
+                    android:adjustViewBounds="true"
+                    android:layout_centerHorizontal="true"
+                    android:gravity="center_horizontal"
+                    android:clickable="true"
+                    android:visibility="gone"
+                    android:layout_below="@id/messageText"
+                    android:layout_marginBottom="6dp"/>
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/rlTextOrImage"
+                android:layout_gravity="right"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/messageTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#fff"/>
+            </LinearLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

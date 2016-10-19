@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/bb_menu_favorites"
+        android:icon="@drawable/ic_bb_favourites"
+        android:title="@string/action_drawer_bb_favourites" />
+    <item
+        android:id="@+id/bb_menu_nearby"
+        android:icon="@drawable/ic_bb_nearby"
+        android:title="@string/action_drawer_nearby" />
+    <item
+        android:id="@+id/bb_menu_unknown"
+        android:icon="@drawable/ic_bb_unknown"
+        android:title="@string/action_drawer_unknown" />
+    <item
+        android:id="@+id/bb_menu_unread"
+        android:icon="@drawable/ic_bb_unread"
+        android:title="@string/action_drawer_unread" />
+
+</menu>
