@@ -58,7 +58,7 @@
 
     <string name="header_friends_count_hint">Priatelia [%1$s]:</string>
 
-    <string name="dialog_about_version">Verzia %1$s.%2$s</string>
+    <string name="dialog_about_version">Verzia %1$s (build %2$s)</string>
     <string name="dialog_no_blocked_users">Nemáš nikoho zablokovaného</string>
     <string name="dialog_wifon_messege">Wi-Fi je vypnuté, WiFON nemôže prijímať ani posielať tvoje správy</string>
     <string name="dialog_wifon_positive">Zapnúť Wi-Fi</string>
@@ -191,7 +191,8 @@
     <string name="profile_dialog_photo_opt_one">Odfotiť</string>
     <string name="profile_dialog_photo_opt_two">Vybrať z galérie</string>
     <string name="profile_unknown_name">Neznámy používateľ</string>
-    <string name="invite_profile_text">Ahoj, klikni na %1$s a pridaj si ma medzi priateľov! %2$s.</string>
+    <string name="invite_profile_text">Ahoj,\n\nchcel(a) by som si s Tebou písať cez appku %1$s. Ak ju ešte nemáš, nájdeš ju na Play Store: https://play.google.com/store/apps/details?id=com.croconaut.ratemebuddy.\n\nAk %1$s už máš, klikni na %2$s, otvor linku v appke a pridaj si ma ako priateľa!\n\n%3$s.</string>
+    <string name="invite_profile_text_hml"><![CDATA[<p>Ahoj,</p><p>chcel(a) by som si s Tebou písať cez appku <a href="https://wifon.sk">%1$s</a>. Ak ju ešte nemáš, nájdeš ju na <a href="https://play.google.com/store/apps/details?id=com.croconaut.ratemebuddy">Play Store</a>.</p><p>Ak %1$s už máš, <a href="%2$s">klikni sem</a>, otvor linku v appke a pridaj si ma ako priateľa!</p></p>%3$s</p>]]></string>
     <string name="invite_profile_subject">%1$s: Žiadosť o priateľstvo od používateľa %2$s</string>
     <string name="dialog_invite_profile_title">Žiadosť o priateľstvo</string>
     <string name="dialog_invite_profile_text">Pridať používateľa %1$s medzi priateľov?</string>

@@ -40,7 +40,7 @@
     <string name="content_desc_logo">App logo</string>
     <string name="content_desc_photo">User picture</string>
     <string name="dialog_about_trademark" translatable="false"><![CDATA[Copyright © <a href=\"https://wifon.sk\">WiFON</a> 2014-2016]]></string>
-    <string name="dialog_about_version">Version %1$s.%2$s</string>
+    <string name="dialog_about_version">Version %1$s (build %2$s)</string>
     <string name="dialog_download_btn_download">Download</string>
     <string name="dialog_download_btn_not_download">Don\'t download</string>
     <string name="dialog_download_btn_only_wifi_download">Download on Wi-Fi only</string>
@@ -74,7 +74,8 @@
     <string name="hops_not_enough_addresses">Insufficient addresses to show</string>
     <string name="hops_title">Message visited following places</string>
     <string name="invite_profile_subject">%1$s: Friend request from %2$s</string>
-    <string name="invite_profile_text">Hi, click on %1$s and add me as your friend! %2$s.</string>
+    <string name="invite_profile_text">Hi,\n\nI\'d like to communicate with you via an app called %1$s. If you don\'t have the app installed, you can find it on the Play Store: https://play.google.com/store/apps/details?id=com.croconaut.ratemebuddy.\n\nIf you do, just click on %2$s, open it in %1$s and add me as your friend!\n\n%3$s.</string>
+    <string name="invite_profile_text_hml"><![CDATA[<p>Hi,</p><p>I\'d like to communicate with you via an app called <a href="https://wifon.sk">%1$s</a>. If you don\'t have the app installed, you can find it on the <a href="https://play.google.com/store/apps/details?id=com.croconaut.ratemebuddy">Play Store</a>.</p><p>If you do, just <a href="%2$s">click here</a>, open it in %1$s and add me as your friend!</p></p>%3$s</p>]]></string>
     <string name="message_add_new_status">Add new status</string>
     <string name="message_deleted">Message couldn\'t have been delivered</string>
     <string name="message_detail_hop_archived">Pending for delivery confirmation, the route will be displayed here.</string>

@@ -264,7 +264,8 @@ public class ToolbarDrawerActivity extends AppCompatActivity implements CptProce
                             );
 
                             String text = String.format(
-                                    getResources().getString(R.string.invite_profile_text),
+                                    getResources().getString(R.string.invite_profile_text_hml),
+                                    getResources().getString(R.string.app_name),
                                     "%s",   // will be replaced by the complete uri
                                     name.replace("%", "%%") // in case name contains '%'
                             );
