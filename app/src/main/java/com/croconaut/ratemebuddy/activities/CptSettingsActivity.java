@@ -228,8 +228,27 @@ public class CptSettingsActivity extends PreferenceActivity implements CptProces
     private void refreshModeSummary(){
         int value = Integer.valueOf(mPrefs.getString(PREFS_MODE, "0"));
         Preference modePrefs = findPreference(PREFS_MODE);
-        modePrefs.setSummary(
-                getResources().getStringArray(R.array.moreSettings)[value]);
+
+        switch (value) {
+            case 2:
+                modePrefs.setSummary(
+                        Html.fromHtml("<font color=\"" + getResources().getColor(R.color.material_red_500) + "\">" +
+                                getResources().getStringArray(R.array.moreSettings)[value] + "</font>")
+                );
+                break;
+            case 1:
+                modePrefs.setSummary(
+                        Html.fromHtml("<font color=\"" + getResources().getColor(R.color.material_orange_500) + "\">" +
+                                getResources().getStringArray(R.array.moreSettings)[value] + "</font>")
+                );
+                break;
+            case 0:
+                modePrefs.setSummary(
+                        Html.fromHtml("<font color=\"" + getResources().getColor(R.color.material_light_green_500) + "\">" +
+                                getResources().getStringArray(R.array.moreSettings)[value] + "</font>")
+                );
+                break;
+        }
     }
 
     private void refreshWifiPolicySummary() {
