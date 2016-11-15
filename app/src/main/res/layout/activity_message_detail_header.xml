@@ -36,7 +36,7 @@
                 android:id="@+id/messageText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:autoLink="email"
+                android:autoLink="email|web"
                 android:gravity="left"
                 android:textColor="#ffffff"
                 android:textSize="18sp" />

@@ -66,12 +66,15 @@ import java.util.Date;
 import java.util.List;
 import java.util.Locale;
 import java.util.concurrent.TimeUnit;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 @SuppressLint("InflateParams")
 public class MessageDetailActivity extends WifonActivity implements CptProcessor {
 
     public static final String UI_MESSAGE_ID_TAG = "ui_message";
     private static final String TAG = MessageDetailActivity.class.getName();
+    private static final String URL_REGEX =  "((http:\\/\\/|https:\\/\\/)?(www.)?(([a-zA-Z0-9-]){2,}\\.){1,4}([a-zA-Z]){2,6}(\\/([a-zA-Z-_\\/\\.0-9#:?=&;,]*)?)?)";
 
     private Profile remoteProfile;
     private SimpleDateFormat dateFormat;
@@ -339,14 +342,24 @@ public class MessageDetailActivity extends WifonActivity implements CptProcessor
                         )
                 );
         } else {
-            messageText.setText(new EmoticonSupportHelper()
-                    .getSmiledText(
-                            MessageDetailActivity.this,
-                            message.getContent()
-                    )
-            );
+            Pattern p = Pattern.compile(URL_REGEX);
+            Matcher matcher = p.matcher(message.getContent().toLowerCase());
+
+            if (matcher.find()) {
+                Log.e(TAG, "LINK");
+                messageText.setLinksClickable(true);
+                messageText.setText(message.getContent());
+                messageText.setMovementMethod(LinkMovementMethod.getInstance());
+            } else {
+                Log.e(TAG, "TEXT");
+                messageText.setText(new EmoticonSupportHelper()
+                        .getSmiledText(
+                                MessageDetailActivity.this,
+                                message.getContent()
+                        )
+                );
+            }
         }
-        messageText.setMovementMethod(LinkMovementMethod.getInstance());
 
 
         hops.addHeaderView(header, null, false);

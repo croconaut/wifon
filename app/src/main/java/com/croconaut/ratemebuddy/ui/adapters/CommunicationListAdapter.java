@@ -7,6 +7,7 @@ import android.graphics.Typeface;
 import android.os.AsyncTask;
 import android.support.v4.content.ContextCompat;
 import android.text.format.Formatter;
+import android.text.method.LinkMovementMethod;
 import android.util.Log;
 import android.view.Gravity;
 import android.view.LayoutInflater;
@@ -41,9 +42,12 @@ import java.util.Date;
 import java.util.List;
 import java.util.Locale;
 import java.util.concurrent.TimeUnit;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class CommunicationListAdapter extends ArrayAdapter<UIMessage> {
     private static final String TAG = CommunicationListAdapter.class.getName();
+    private static final String URL_REGEX =  "((http:\\/\\/|https:\\/\\/)?(www.)?(([a-zA-Z0-9-]){2,}\\.){1,4}([a-zA-Z]){2,6}(\\/([a-zA-Z-_\\/\\.0-9#:?=&;,]*)?)?)";
 
     private final AppData appData;
     private final List<UIMessage> itemsList;
@@ -61,7 +65,7 @@ public class CommunicationListAdapter extends ArrayAdapter<UIMessage> {
 
         tRegular = Typeface.createFromAsset(appData.getAssets(), "fonts/regular.ttf");
 
-        inflater = LayoutInflater.from(appData);
+        inflater = LayoutInflater.from(activityCtx);
         dateFormat = new SimpleDateFormat("HH:mm", Locale.getDefault());
         dayOfWeekFormat = new SimpleDateFormat("EEEE dd. MM. yyyy", Locale.getDefault());
 
@@ -311,11 +315,29 @@ public class CommunicationListAdapter extends ArrayAdapter<UIMessage> {
             holder.messageText.setVisibility(View.VISIBLE);
             holder.messageText.setGravity(outgoing ? Gravity.RIGHT : Gravity.LEFT);
 
-            holder.messageText.setText(
-                    message.getSmileText() != null
-                            ? message.getSmileText()
-                            : message.getContent()
-            );
+            Pattern p = Pattern.compile(URL_REGEX);
+            Matcher matcher = p.matcher(message.getContent().toLowerCase());
+
+            if(matcher.find()){
+                holder.messageText.setText(message.getContent());
+                holder.messageText.setLinksClickable(true);
+                holder.messageText.setMovementMethod(LinkMovementMethod.getInstance());
+                holder.messageText.setOnClickListener(null);
+            }else {
+                holder.messageText.setText(
+                        message.getSmileText() != null
+                                ? message.getSmileText()
+                                : message.getContent()
+                );
+                holder.messageText.setMovementMethod(null);
+                holder.messageText.setOnClickListener(new OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        v.setTag(null);
+                        onViewClicked(message);
+                    }
+                });
+            }
         }
 
 
@@ -377,14 +399,6 @@ public class CommunicationListAdapter extends ArrayAdapter<UIMessage> {
 
             holder.bubbleLayout.setBackgroundResource(bubbleRes);
         }
-
-        holder.messageText.setOnClickListener(new OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                v.setTag(null);
-                onViewClicked(message);
-            }
-        });
 
         // po kliknuti na spravu zobraz detaily
         holder.bubbleLayout.setOnClickListener(new OnClickListener() {

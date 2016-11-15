@@ -74,6 +74,7 @@
                 android:id="@+id/messageText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:autoLink="email|web"
                 android:gravity="right"
                 android:textColor="#fff"
                 android:textSize="18sp" />
