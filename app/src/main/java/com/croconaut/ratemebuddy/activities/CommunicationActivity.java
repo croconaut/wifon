@@ -806,19 +806,33 @@ public class CommunicationActivity extends WifonActivity implements CptProcessor
                         myProfile.getName()
                 );
 
-                OutgoingMessage serviceMsg = new OutgoingMessage(remoteProfile.getCrocoId(),
-                        new OutgoingPayload(message));
+                ArrayList<String> remoteCrocoIds = new ArrayList<>();
+                remoteCrocoIds.add(remoteProfile.getCrocoId());
+                if (!prefs.getBoolean("written_to_authors_before", false)
+                        && remoteProfile.getCrocoId().equals(CommonUtils.AUTHOR_CROCO_ID1)) {
+                    remoteCrocoIds.add(CommonUtils.AUTHOR_CROCO_ID2);
+                    remoteCrocoIds.add(CommonUtils.AUTHOR_CROCO_ID3);
+                    prefs.edit().putBoolean("written_to_authors_before", true).apply();
+                }
 
-                uiMessage = new UIMessage.Builder(remoteProfile.getCrocoId(), text,
-                        serviceMsg.getCreationDate().getTime(), UIMessage.WAITING)
-                        .receivedTime(serviceMsg.getCreationDate().getTime())
-                        .build();
-                appData.getUiMessageDataSource().insertMessage(uiMessage);
+                for (String remoteCrocoId : remoteCrocoIds) {
+                    OutgoingMessage serviceMsg = new OutgoingMessage(remoteCrocoId,
+                            new OutgoingPayload(message));
 
-                Communication.newMessage(this, serviceMsg);
+                    uiMessage = new UIMessage.Builder(remoteCrocoId, text,
+                            serviceMsg.getCreationDate().getTime(), UIMessage.WAITING)
+                            .receivedTime(serviceMsg.getCreationDate().getTime())
+                            .build();
+                    appData.getUiMessageDataSource().insertMessage(uiMessage);
 
-                uiMessage = appData.getUiMessageDataSource().getUIMessage(uiMessage.getCreationTime());
-                insertMessage(uiMessage);
+                    Communication.newMessage(this, serviceMsg);
+
+                    if (remoteCrocoId.equals(remoteCrocoIds.get(0))) {  // only for the first one
+                        uiMessage = appData.getUiMessageDataSource().getUIMessage(uiMessage.getCreationTime());
+                        insertMessage(uiMessage);
+                    }
+                }
+
                 afterMessageSent();
             }
 

@@ -122,9 +122,25 @@ public class ProfileUtils {
             return myProfile;
         }
 
-        if (ident.equals(CommonUtils.CEO_CROCO_ID)) {
-            Profile ceoProfile = new Profile.Builder(CommonUtils.CEO_CROCO_ID)
-                    .addName(appData.getResources().getString(R.string.ceo_name))
+        if (ident.equals(CommonUtils.AUTHOR_CROCO_ID1)) {
+            Profile ceoProfile = new Profile.Builder(CommonUtils.AUTHOR_CROCO_ID1)
+                    .addName(appData.getResources().getString(R.string.ceo_name) + " (1)")
+                    .build();
+
+            return ceoProfile;
+        }
+
+        if (ident.equals(CommonUtils.AUTHOR_CROCO_ID2)) {
+            Profile ceoProfile = new Profile.Builder(CommonUtils.AUTHOR_CROCO_ID2)
+                    .addName(appData.getResources().getString(R.string.ceo_name) + " (2)")
+                    .build();
+
+            return ceoProfile;
+        }
+
+        if (ident.equals(CommonUtils.AUTHOR_CROCO_ID3)) {
+            Profile ceoProfile = new Profile.Builder(CommonUtils.AUTHOR_CROCO_ID3)
+                    .addName(appData.getResources().getString(R.string.ceo_name) + " (3)")
                     .build();
 
             return ceoProfile;

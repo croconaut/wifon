@@ -17,7 +17,7 @@
     <string name="action_sort_alphabetically">Sort alphabetically</string>
     <string name="action_sort_favourites">Sort favourites first</string>
     <string name="action_sort_rating">Sort by likes</string>
-    <string name="action_write_ceo">Write to the CEO</string>
+    <string name="action_write_ceo">Write to the authors</string>
     <string name="activity_change_status">Change status</string>
     <string name="activity_create_profile">Your profile</string>
     <string name="activity_display_title_friends">Friends</string>
@@ -35,7 +35,7 @@
     <string name="attribution_soundcloud">Android-crop library. Copyright 2015 SoundCloud. https://github.com/jdamcd/android-crop</string>
     <string name="attribution_text_drawable">Text Drawable library. Copyright Amulya Khare. https://github.com/amulyakhare/TextDrawable</string>
     <string name="cancel">Cancel</string>
-    <string name="ceo_name">CEO</string>
+    <string name="ceo_name">WiFON authors</string>
     <string name="content_desc_list_pref_check">Tap to check</string>
     <string name="content_desc_logo">App logo</string>
     <string name="content_desc_photo">User picture</string>
@@ -65,7 +65,7 @@
     <string name="emptyNearby">This is where nearby users will be shown</string>
     <string name="emptyUnknown">This is where messages from unknown users will be shown</string>
     <string name="emptyUnread">This is where unread messages will be shown</string>
-    <string name="header_friends_count_hint">Friends [%1$s]:</string>
+    <string name="header_friends_count_hint">Friends [%1$d]:</string>
     <string name="hop_export_error">GPX export has failed</string>
     <string name="hop_install">Install</string>
     <string name="hop_installEarth">Google Earth not installed</string>
