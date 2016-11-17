@@ -36,7 +36,7 @@
     <string name="attribution_image_chooser">Image chooser library. Copyright 2013 Kumar Bibek. https://github.com/coomar2841/image-chooser-library</string>
     <string name="attribution_text_drawable">Text Drawable library. Copyright Amulya Khare. https://github.com/amulyakhare/TextDrawable</string>
 
-    <string name="ceo_name">Autor WiFONu</string>
+    <string name="ceo_name">Autori WiFONu</string>
     <string name="cancel">Zrušiť</string>
 
     <string name="content_desc_photo">Fotka používateľa</string>
@@ -56,7 +56,7 @@
     <string name="dialog_upload_btn_only_wifi_upload">Odošli len na WiFi</string>
     <string name="dialog_upload_rb_all_for_future">Všetky súbory (aj v budúcnosti)</string>
 
-    <string name="header_friends_count_hint">Priatelia [%1$s]:</string>
+    <string name="header_friends_count_hint">Priatelia [%1$d]:</string>
 
     <string name="dialog_about_version">Verzia %1$s (build %2$s)</string>
     <string name="dialog_no_blocked_users">Nemáš nikoho zablokovaného</string>

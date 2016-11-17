@@ -45,7 +45,9 @@ public class CommonUtils {
     public static final String FILE_NAME_PROFILE = "profile.wifon";
     public static final String PROFILE_DIRECTORY_MYSELF = "wifon/myself";
 
-    public static final String CEO_CROCO_ID = "66:bc:0c:51:4a:0a";
+    public static final String AUTHOR_CROCO_ID1 = "66:bc:0c:51:4a:0a"; // mikro
+    public static final String AUTHOR_CROCO_ID2 = "12:92:66:8f:1d:e6"; // spili
+    public static final String AUTHOR_CROCO_ID3 = "46:91:db:3e:e1:4c"; // xi
 
     private static final String PREF_UNIQUE_ID = "PREF_UNIQUE_ID";
 
