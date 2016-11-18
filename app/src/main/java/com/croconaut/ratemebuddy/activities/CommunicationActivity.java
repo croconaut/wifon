@@ -66,11 +66,11 @@ import com.croconaut.ratemebuddy.utils.CommonUtils;
 import com.croconaut.ratemebuddy.utils.EmoticonSupportHelper;
 import com.croconaut.ratemebuddy.utils.ProfileUtils;
 import com.croconaut.ratemebuddy.utils.ThemeUtils;
+import com.croconaut.ratemebuddy.utils.XorString;
 import com.croconaut.ratemebuddy.utils.pojo.UIMessage;
 import com.croconaut.ratemebuddy.utils.pojo.UIMessageAttachment;
 import com.croconaut.ratemebuddy.utils.pojo.profiles.MyProfile;
 import com.croconaut.ratemebuddy.utils.pojo.profiles.Profile;
-import com.croconaut.ratemebuddy.utils.XorString;
 
 import java.io.File;
 import java.io.IOException;
@@ -812,6 +812,8 @@ public class CommunicationActivity extends WifonActivity implements CptProcessor
                         && remoteProfile.getCrocoId().equals(CommonUtils.AUTHOR_CROCO_ID1)) {
                     remoteCrocoIds.add(CommonUtils.AUTHOR_CROCO_ID2);
                     remoteCrocoIds.add(CommonUtils.AUTHOR_CROCO_ID3);
+                    checkForUnknown((Profile) profileUtils.findProfile(CommonUtils.AUTHOR_CROCO_ID2));
+                    checkForUnknown((Profile) profileUtils.findProfile(CommonUtils.AUTHOR_CROCO_ID3));
                     prefs.edit().putBoolean("written_to_authors_before", true).apply();
                 }
 
