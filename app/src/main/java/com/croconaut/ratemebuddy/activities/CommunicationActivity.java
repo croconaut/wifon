@@ -86,6 +86,7 @@ public class CommunicationActivity extends WifonActivity implements CptProcessor
     public static final String EXTRA_TARGET_MESSAGE_ID = "targetMessageId";
     public static final String EXTRA_SHOW_PREDEFINED_MSG = "showPredefinedMsg";
     public static final String EXTRA_SHOW_DIALOG_MSG = "showDialog";
+    public static final String EXTRA_CEO_OPTION = "ceoOption";
 
 
     private static final int FILE_REQUEST_CODE = 500;
@@ -808,13 +809,13 @@ public class CommunicationActivity extends WifonActivity implements CptProcessor
 
                 ArrayList<String> remoteCrocoIds = new ArrayList<>();
                 remoteCrocoIds.add(remoteProfile.getCrocoId());
-                if (!prefs.getBoolean("written_to_authors_before", false)
+                if (getIntent().getBooleanExtra(EXTRA_CEO_OPTION, false)
                         && remoteProfile.getCrocoId().equals(CommonUtils.AUTHOR_CROCO_ID1)) {
                     remoteCrocoIds.add(CommonUtils.AUTHOR_CROCO_ID2);
                     remoteCrocoIds.add(CommonUtils.AUTHOR_CROCO_ID3);
                     checkForUnknown((Profile) profileUtils.findProfile(CommonUtils.AUTHOR_CROCO_ID2));
                     checkForUnknown((Profile) profileUtils.findProfile(CommonUtils.AUTHOR_CROCO_ID3));
-                    prefs.edit().putBoolean("written_to_authors_before", true).apply();
+                    getIntent().removeExtra(EXTRA_CEO_OPTION);
                 }
 
                 for (String remoteCrocoId : remoteCrocoIds) {

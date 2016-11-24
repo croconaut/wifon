@@ -286,6 +286,7 @@ public class ToolbarDrawerActivity extends AppCompatActivity implements CptProce
                         case R.id.writeToCeo:
                             Intent ceoIntent = new Intent(mContext, CommunicationActivity.class);
                             ceoIntent.putExtra(CommunicationActivity.EXTRA_TARGET_CROCO_ID, CommonUtils.AUTHOR_CROCO_ID1);
+                            ceoIntent.putExtra(CommunicationActivity.EXTRA_CEO_OPTION, true);
                             startActivity(ceoIntent);
                             overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
                             return true;

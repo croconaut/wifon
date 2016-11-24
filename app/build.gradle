@@ -1,7 +1,7 @@
 apply plugin: 'com.android.application'
 
 android {
-    buildToolsVersion "25.0.0"
+    buildToolsVersion "25.0.1"
 
     defaultConfig {
         applicationId "com.croconaut.ratemebuddy"
@@ -10,8 +10,8 @@ android {
         minSdkVersion 16
         targetSdkVersion 22
 
-        versionCode 11
-        versionName "1.0.2"
+        versionCode 12
+        versionName "1.0.3"
 
         compileOptions {
             sourceCompatibility JavaVersion.VERSION_1_7
@@ -58,5 +58,5 @@ dependencies {
     compile 'com.soundcloud.android:android-crop:1.0.1@aar'
     compile 'com.amulyakhare:com.amulyakhare.textdrawable:1.0.1'
 
-    compile 'com.croconaut:cpt:1.0.4'
+    compile 'com.croconaut:cpt-test:1.0.4'
 }
