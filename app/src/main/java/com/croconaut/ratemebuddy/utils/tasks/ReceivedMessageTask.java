@@ -30,6 +30,7 @@ import com.croconaut.ratemebuddy.data.pojo.RMBProfile;
 import com.croconaut.ratemebuddy.data.pojo.VoteUp;
 import com.croconaut.ratemebuddy.utils.CommonUtils;
 import com.croconaut.ratemebuddy.utils.ProfileUtils;
+import com.croconaut.ratemebuddy.utils.XorString;
 import com.croconaut.ratemebuddy.utils.pojo.TimelineInfo;
 import com.croconaut.ratemebuddy.utils.pojo.UIMessage;
 import com.croconaut.ratemebuddy.utils.pojo.UIMessageAttachment;
@@ -37,7 +38,6 @@ import com.croconaut.ratemebuddy.utils.pojo.profiles.IProfile;
 import com.croconaut.ratemebuddy.utils.pojo.profiles.MyProfile;
 import com.croconaut.ratemebuddy.utils.pojo.profiles.Profile;
 import com.croconaut.ratemebuddy.utils.pojo.profiles.states.ActualState;
-import com.croconaut.ratemebuddy.utils.XorString;
 
 import org.json.JSONArray;
 import org.json.JSONObject;

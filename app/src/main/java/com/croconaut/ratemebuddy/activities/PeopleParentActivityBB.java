@@ -4,11 +4,9 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
-import android.support.annotation.ColorInt;
 import android.support.annotation.IdRes;
 import android.support.annotation.NonNull;
 import android.support.v4.app.FragmentTransaction;
-import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.widget.SearchView;
 import android.support.v7.widget.Toolbar;
@@ -17,7 +15,6 @@ import android.util.Log;
 import android.view.Gravity;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
 
 import com.croconaut.cpt.data.Communication;
 import com.croconaut.ratemebuddy.AppData;
@@ -26,13 +23,10 @@ import com.croconaut.ratemebuddy.R;
 import com.croconaut.ratemebuddy.activities.notifications.NearbyNotification;
 import com.croconaut.ratemebuddy.activities.notifications.Notification;
 import com.croconaut.ratemebuddy.utils.ProfileUtils;
-import com.croconaut.ratemebuddy.utils.ThemeManager;
 import com.croconaut.ratemebuddy.utils.pojo.profiles.MyProfile;
 import com.croconaut.ratemebuddy.utils.pojo.profiles.Profile;
 import com.roughike.bottombar.BottomBar;
-import com.roughike.bottombar.BottomBarTab;
 import com.roughike.bottombar.OnTabSelectListener;
-
 
 import java.io.IOException;
 

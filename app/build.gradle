@@ -10,8 +10,8 @@ android {
         minSdkVersion 16
         targetSdkVersion 22
 
-        versionCode 13
-        versionName "1.0.4"
+        versionCode 14
+        versionName "1.0.5"
 
         compileOptions {
             sourceCompatibility JavaVersion.VERSION_1_7
@@ -58,5 +58,5 @@ dependencies {
     compile 'com.soundcloud.android:android-crop:1.0.1@aar'
     compile 'com.amulyakhare:com.amulyakhare.textdrawable:1.0.1'
 
-    compile 'com.croconaut:cpt:1.0.4'
+    compile 'com.croconaut:cpt:1.0.5'
 }

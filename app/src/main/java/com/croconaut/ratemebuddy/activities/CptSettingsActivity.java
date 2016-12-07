@@ -90,7 +90,7 @@ public class CptSettingsActivity extends PreferenceActivity implements CptProces
                 displayPreferenceDialog(
                         preference,
                         onClickListener,
-                        Integer.valueOf(mPrefs.getString(preference.getKey(), "0")),
+                        Integer.valueOf(mPrefs.getString(preference.getKey(), "2")),
                         getResources().getStringArray(R.array.moreSettings)
                 );
                 return true;
@@ -226,7 +226,7 @@ public class CptSettingsActivity extends PreferenceActivity implements CptProces
     }
 
     private void refreshModeSummary(){
-        int value = Integer.valueOf(mPrefs.getString(PREFS_MODE, "0"));
+        int value = Integer.valueOf(mPrefs.getString(PREFS_MODE, "2"));
         Preference modePrefs = findPreference(PREFS_MODE);
 
         switch (value) {

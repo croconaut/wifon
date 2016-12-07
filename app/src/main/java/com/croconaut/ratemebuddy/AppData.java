@@ -3,8 +3,6 @@ package com.croconaut.ratemebuddy;
 import android.app.Activity;
 import android.app.Application;
 import android.content.Context;
-import android.net.wifi.WifiConfiguration;
-import android.net.wifi.WifiManager;
 import android.os.Bundle;
 
 import com.croconaut.ratemebuddy.activities.CptProcessor;
@@ -15,7 +13,6 @@ import com.croconaut.ratemebuddy.data.UIMessageDataSource;
 import com.croconaut.ratemebuddy.utils.pojo.profiles.Profile;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class AppData extends Application {
     private static Context mAppContext;

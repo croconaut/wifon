@@ -32,7 +32,6 @@ import com.croconaut.ratemebuddy.utils.ProfileUtils;
 import com.croconaut.ratemebuddy.utils.ThemeUtils;
 import com.croconaut.ratemebuddy.utils.pojo.profiles.IProfile;
 import com.croconaut.ratemebuddy.utils.pojo.profiles.MyProfile;
-import com.croconaut.ratemebuddy.utils.pojo.profiles.Profile;
 
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;

@@ -2,6 +2,7 @@ package com.croconaut.ratemebuddy;
 
 import android.content.Context;
 import android.content.Intent;
+import android.preference.PreferenceManager;
 import android.util.Log;
 
 import com.croconaut.cpt.data.Communication;
@@ -9,6 +10,8 @@ import com.croconaut.cpt.data.IncomingMessage;
 import com.croconaut.cpt.data.MessageAttachment;
 import com.croconaut.cpt.data.NearbyUser;
 import com.croconaut.cpt.network.NetworkHop;
+import com.croconaut.cpt.ui.CptController;
+import com.croconaut.cpt.ui.LinkLayerMode;
 import com.croconaut.ratemebuddy.activities.CptSettingsActivity;
 import com.croconaut.ratemebuddy.utils.pojo.profiles.MyProfile;
 import com.croconaut.ratemebuddy.utils.tasks.AckedTask;
@@ -44,7 +47,24 @@ public class CptReceiver extends com.croconaut.cpt.ui.CptReceiver {
 
         switch (intent.getAction()) {
             case Communication.ACTION_OPEN_CPT_SETTINGS: {
+                Intent closeIntent = new Intent(Intent.ACTION_CLOSE_SYSTEM_DIALOGS);
+                context.sendBroadcast(closeIntent);
                 context.startActivity(new Intent(context, CptSettingsActivity.class).addFlags(Intent.FLAG_ACTIVITY_NEW_TASK));
+                break;
+            }
+
+            case Communication.ACTION_REQUEST_CPT_MODE: {
+                int mode = intent.getIntExtra(Communication.EXTRA_REQUEST_CPT_MODE, LinkLayerMode.OFF);
+                if (mode == LinkLayerMode.FOREGROUND) {
+                    PreferenceManager.getDefaultSharedPreferences(context).edit().putString(CptSettingsActivity.PREFS_MODE, "0").apply();
+                } else if (mode == LinkLayerMode.BACKGROUND) {
+                    PreferenceManager.getDefaultSharedPreferences(context).edit().putString(CptSettingsActivity.PREFS_MODE, "1").apply();
+                } else {
+                    PreferenceManager.getDefaultSharedPreferences(context).edit().putString(CptSettingsActivity.PREFS_MODE, "2").apply();
+                }
+
+                CptController cptController = new CptController(context);
+                cptController.setMode(mode);
                 break;
             }
 

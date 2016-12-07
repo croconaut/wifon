@@ -231,10 +231,10 @@ public abstract class WifonActivity extends ToolbarDrawerActivity {
         if (MyProfile.getInstance(mContext) == null) return;
         // not very nice...
         CptController cptController = new CptController(this);
-        if (PreferenceManager.getDefaultSharedPreferences(this).getString(CptSettingsActivity.PREFS_MODE, "0").equals("0")) {
+        if (PreferenceManager.getDefaultSharedPreferences(this).getString(CptSettingsActivity.PREFS_MODE, "2").equals("0")) {
             // foreground
             cptController.setMode(LinkLayerMode.FOREGROUND);
-        } else if (PreferenceManager.getDefaultSharedPreferences(this).getString(CptSettingsActivity.PREFS_MODE, "0").equals("1")) {
+        } else if (PreferenceManager.getDefaultSharedPreferences(this).getString(CptSettingsActivity.PREFS_MODE, "2").equals("1")) {
             // background
             cptController.setMode(LinkLayerMode.BACKGROUND);
         } else {
