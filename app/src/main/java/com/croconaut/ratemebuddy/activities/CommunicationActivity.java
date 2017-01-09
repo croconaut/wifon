@@ -66,11 +66,11 @@ import com.croconaut.ratemebuddy.utils.CommonUtils;
 import com.croconaut.ratemebuddy.utils.EmoticonSupportHelper;
 import com.croconaut.ratemebuddy.utils.ProfileUtils;
 import com.croconaut.ratemebuddy.utils.ThemeUtils;
-import com.croconaut.ratemebuddy.utils.XorString;
 import com.croconaut.ratemebuddy.utils.pojo.UIMessage;
 import com.croconaut.ratemebuddy.utils.pojo.UIMessageAttachment;
 import com.croconaut.ratemebuddy.utils.pojo.profiles.MyProfile;
 import com.croconaut.ratemebuddy.utils.pojo.profiles.Profile;
+import com.croconaut.ratemebuddy.utils.XorString;
 
 import java.io.File;
 import java.io.IOException;
@@ -86,7 +86,6 @@ public class CommunicationActivity extends WifonActivity implements CptProcessor
     public static final String EXTRA_TARGET_MESSAGE_ID = "targetMessageId";
     public static final String EXTRA_SHOW_PREDEFINED_MSG = "showPredefinedMsg";
     public static final String EXTRA_SHOW_DIALOG_MSG = "showDialog";
-    public static final String EXTRA_CEO_OPTION = "ceoOption";
 
 
     private static final int FILE_REQUEST_CODE = 500;
@@ -807,35 +806,19 @@ public class CommunicationActivity extends WifonActivity implements CptProcessor
                         myProfile.getName()
                 );
 
-                ArrayList<String> remoteCrocoIds = new ArrayList<>();
-                remoteCrocoIds.add(remoteProfile.getCrocoId());
-                if (getIntent().getBooleanExtra(EXTRA_CEO_OPTION, false)
-                        && remoteProfile.getCrocoId().equals(CommonUtils.AUTHOR_CROCO_ID1)) {
-                    remoteCrocoIds.add(CommonUtils.AUTHOR_CROCO_ID2);
-                    remoteCrocoIds.add(CommonUtils.AUTHOR_CROCO_ID3);
-                    checkForUnknown((Profile) profileUtils.findProfile(CommonUtils.AUTHOR_CROCO_ID2));
-                    checkForUnknown((Profile) profileUtils.findProfile(CommonUtils.AUTHOR_CROCO_ID3));
-                    getIntent().removeExtra(EXTRA_CEO_OPTION);
-                }
+                OutgoingMessage serviceMsg = new OutgoingMessage(remoteProfile.getCrocoId(),
+                        new OutgoingPayload(message));
 
-                for (String remoteCrocoId : remoteCrocoIds) {
-                    OutgoingMessage serviceMsg = new OutgoingMessage(remoteCrocoId,
-                            new OutgoingPayload(message));
+                uiMessage = new UIMessage.Builder(remoteProfile.getCrocoId(), text,
+                        serviceMsg.getCreationDate().getTime(), UIMessage.WAITING)
+                        .receivedTime(serviceMsg.getCreationDate().getTime())
+                        .build();
+                appData.getUiMessageDataSource().insertMessage(uiMessage);
 
-                    uiMessage = new UIMessage.Builder(remoteCrocoId, text,
-                            serviceMsg.getCreationDate().getTime(), UIMessage.WAITING)
-                            .receivedTime(serviceMsg.getCreationDate().getTime())
-                            .build();
-                    appData.getUiMessageDataSource().insertMessage(uiMessage);
+                Communication.newMessage(this, serviceMsg);
 
-                    Communication.newMessage(this, serviceMsg);
-
-                    if (remoteCrocoId.equals(remoteCrocoIds.get(0))) {  // only for the first one
-                        uiMessage = appData.getUiMessageDataSource().getUIMessage(uiMessage.getCreationTime());
-                        insertMessage(uiMessage);
-                    }
-                }
-
+                uiMessage = appData.getUiMessageDataSource().getUIMessage(uiMessage.getCreationTime());
+                insertMessage(uiMessage);
                 afterMessageSent();
             }
 
