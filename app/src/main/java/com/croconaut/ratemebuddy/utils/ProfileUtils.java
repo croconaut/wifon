@@ -122,14 +122,6 @@ public class ProfileUtils {
             return myProfile;
         }
 
-        if (ident.equals(CommonUtils.CEO_CROCO_ID)) {
-            Profile ceoProfile = new Profile.Builder(CommonUtils.CEO_CROCO_ID)
-                    .addName(appData.getResources().getString(R.string.ceo_name))
-                    .build();
-
-            return ceoProfile;
-        }
-
         Log.e(TAG, "Profile " + name + " not found, ident: " + ident + "... creating new profile");
         // profile was not found
         Profile profile = new Profile.Builder(ident).addName(name).build();
