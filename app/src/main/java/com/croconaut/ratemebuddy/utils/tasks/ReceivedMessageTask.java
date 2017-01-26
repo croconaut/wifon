@@ -438,7 +438,7 @@ public class ReceivedMessageTask extends AsyncTask<Intent, Void, PostExecuteValu
 //        }
 
 
-        if (!profile.getStatus().getStatusID().equals(status.getStatusID())) {
+        if (profile.getStatus() != null && !profile.getStatus().getStatusID().equals(status.getStatusID())) {
 
             if (profile.getType() == Profile.FAVOURITE) {
                 TimelineInfo timelineInfo = new TimelineInfo.Builder(System.currentTimeMillis(),
