@@ -4,6 +4,8 @@ import android.app.Activity;
 import android.app.Application;
 import android.content.Context;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
+import android.support.v7.app.AppCompatDelegate;
 
 import com.croconaut.ratemebuddy.activities.CptProcessor;
 import com.croconaut.ratemebuddy.data.ProfileDataSource;
@@ -11,6 +13,8 @@ import com.croconaut.ratemebuddy.data.StatusDataSource;
 import com.croconaut.ratemebuddy.data.TimelineDataSource;
 import com.croconaut.ratemebuddy.data.UIMessageDataSource;
 import com.croconaut.ratemebuddy.utils.pojo.profiles.Profile;
+import com.croconaut.tictactoe.communication.GameCommunication;
+import com.croconaut.tictactoe.storage.GameRepository;
 
 import java.util.ArrayList;
 
@@ -23,6 +27,8 @@ public class AppData extends Application {
     private ProfileDataSource profileDataSource;
     private UIMessageDataSource uiMessageDataSource;
     private TimelineDataSource timelineDataSource;
+
+    private GameCommunication gameCommunication;
 
     private CptProcessor mCurrentActivity;
     private ActivityLifecycleCallbacks mActivityLifecycleCallbacks = new ActivityLifecycleCallbacks() {
@@ -60,8 +66,12 @@ public class AppData extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
+
+        AppCompatDelegate.setCompatVectorFromResourcesEnabled(true);
+
         mAppContext = getApplicationContext();
         init();
+
 
 //        WifiManager wm = (WifiManager) getSystemService(WIFI_SERVICE);
 //        List<WifiConfiguration> networks = wm.getConfiguredNetworks();
@@ -84,6 +94,8 @@ public class AppData extends Application {
 
         timelineDataSource = new TimelineDataSource(this);
         timelineDataSource.open();
+
+        gameCommunication = new GameCommunication(this);
 
         registerActivityLifecycleCallbacks(mActivityLifecycleCallbacks);
     }
@@ -108,13 +120,25 @@ public class AppData extends Application {
         return timelineDataSource;
     }
 
+    @NonNull
+    public GameCommunication getGameCommunication() {
+        return gameCommunication;
+    }
+
+
+    @NonNull
+    public GameRepository getGameRepository() {
+        return gameCommunication.getGameRepository();
+    }
+
     public boolean syncProfileToNearby(Profile remoteProfile) {
         if (getNearbyPeople().contains(remoteProfile)) {
             int index = getNearbyPeople().indexOf(remoteProfile);
             getNearbyPeople().remove(index);
             getNearbyPeople().add(remoteProfile);
             return true;
-        } return false;
+        }
+        return false;
     }
 
     public CptProcessor getCurrentActivity() {

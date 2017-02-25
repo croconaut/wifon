@@ -24,4 +24,6 @@
     <dimen name="iv_item_detail_height_and_width">17dp</dimen>
     <dimen name="iv_item_detail_margin">2dp</dimen>
 
+    <dimen name="tictactoe_grid_inset">1dp</dimen>
+
 </resources>

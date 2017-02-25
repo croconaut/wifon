@@ -12,6 +12,7 @@
     <string name="action_drawer_unread">Unread</string>
     <string name="action_invite_friend">Invite a friend</string>
     <string name="action_report_bug">Report a bug</string>
+    <string name="action_game_tic_tac_toe">TicTacToe</string>
     <string name="action_settings">Settings</string>
     <string name="action_share">Share WiFON</string>
     <string name="action_sort_alphabetically">Sort alphabetically</string>
@@ -270,4 +271,60 @@
     <string name="message_attachment_preview_title">New file</string>
     <string name="message_timeline_status_changed_remote"><![CDATA[User <b>%1$s</b> has changed his status to: <b>%2$s</b>]]></string>
     <string name="title_activity_cpt_settings">WiFON Settings</string>
+
+    <string name="tictactoe_invite_notif_request_content_text_invite_new">%1$s invites you to play %2$dx%3$d TicTacToe game, with you playing as %4$s !</string>
+    <string name="tictactoe_invite_notif_request_content_text_invite_replace">%1$s replies tou your invite with another invite! Do you want to play %2$dx%3$d TicTacToe game, with you playing as %4$s !</string>
+    <string name="tictactoe_invite_notif_request_btn_accept_text">Accept</string>
+    <string name="tictactoe_invite_notif_request_btn_decline_text">Decline</string>
+
+    <string name="tictactoe_invite_notif_response_decline_text">%1$s declines your invitation to TicTacToeGame</string>
+    <string name="tictactoe_invite_notif_response_decline_title">Invitation declined!</string>
+
+    <string name="tictactoe_invite_notif_response_accept_text">%1$s accepted your invitation to TicTacToeGame</string>
+    <string name="tictactoe_invite_notif_response_accept_title">Invitation has been accepted!</string>
+
+    <string name="tictactoe_move_notif_title">New move!</string>
+    <string name="tictactoe_move_notif_text">%1$s performed move.</string>
+
+    <string name="tictactoe_surrender_notif_text">%1$s surrendered.</string>
+    <string name="tictactoe_surrender_notif_title">Surrender!</string>
+
+
+    <string name="tictactoe_invite_players_toolbar_text">Available players</string>
+    <string name="tictactoe_invite_players_item_games_ratio"><![CDATA[(<font color=\"#8bc34a\">%1$d</font> - <font color=\"#2196f3\">%2$d</font> - <font color=\"#f44336\">%3$d</font>)]]></string>
+    <string name="tictactoe_invite_players_item_games_total">Played games: %1$d\u0020</string>
+
+    <string name="tictactoe_invite_players_game_state_not_in_progress">Currently no game in progress!</string>
+    <string name="tictactoe_invite_players_game_state_in_progress_pending_response">Waiting for other player to answer your invitation!</string>
+    <string name="tictactoe_invite_players_game_state_in_progress_pending_request">Waiting for your answer!</string>
+    <string name="tictactoe_invite_players_game_state_in_progress_your_move">Waiting on your move!</string>
+    <string name="tictactoe_invite_players_game_state_in_progress_opponent_move">Waiting on opponent move!</string>
+
+    <string name="tictactoe_game_player_seed">You play with \'%1$s\'</string>
+
+    <string name="tictactoe_invite_players_menu_toolbar_text">Invite - %1$s</string>
+    <string name="tictactoe_invite_players_menu_container_size_title">Choose game size</string>
+    <string name="tictactoe_invite_players_menu_container_seed_title">Pick your symbol</string>
+    <string name="tictactoe_invite_players_menu_btn_invite_text">INVITE</string>
+
+    <string name="tictactoe_game_toolbar_text">%1$s</string>
+    <string name="tictactoe_game_btn_surrender_text">SURRENDER</string>
+
+    <string name="tictactoe_invite_players_game_state_won_text">Won</string>
+    <string name="tictactoe_invite_players_game_state_lost_text">Lost</string>
+    <string name="tictactoe_invite_players_game_state_draw_text">Draw</string>
+    <string name="tictactoe_game_dialog_repeat_game_message_text">Do you want to repeat the game?</string>
+    <string name="tictactoe_game_dialog_btn_positive_text">Yes</string>
+    <string name="tictactoe_game_dialog_btn_negative_text">No</string>
+    <string name="tictactoe_game_dialog_game_end_already_invite_message_text">Game has ended. %1$s invites you to play %2$dx%3$d another TicTacToe game, with you playing as %4$s! Accept?</string>
+    <string name="tictactoe_game_dialog_game_end_already_invite_message_title">Invite found!</string>
+
+    <string name="tictactoe_game_dialog_surrender_game_title_text">Surrender ?</string>
+    <string name="tictactoe_game_dialog_surrender_game_message_text">This means that the game will end with you losing. Still surrender ?</string>
+    <string name="tictactoe_game_dialog_surrender_game_btn_positive_text">Yes</string>
+    <string name="tictactoe_game_dialog_surrender_game_btn_negative_text">No</string>
+
+    <string name="tictactoe_toast_invite_refused_game_already_pending">You already have a pending invitation from this player!</string>
+
+
 </resources>

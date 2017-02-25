@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:id="@+id/sizeTitleContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:background="?themeColor"
+        android:paddingBottom="16dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:paddingTop="16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:gravity="center_horizontal"
+            android:text="@string/tictactoe_invite_players_menu_container_size_title"
+            android:textColor="@color/material_white"
+            android:textSize="20sp" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/sizeOptionsContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/sizeTitleContainer"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tvSizeNormal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:padding="32dp"
+            android:text="3x3"
+            android:textSize="25sp" />
+
+        <TextView
+            android:id="@+id/tvSizeBig"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:padding="32dp"
+            android:text="4x4"
+            android:textSize="25sp" />
+
+        <TextView
+            android:id="@+id/tvSizeHuge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal|center_vertical"
+            android:padding="32dp"
+            android:text="5x5"
+            android:textSize="25sp" />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/seedTitleContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/sizeOptionsContainer"
+        android:layout_centerHorizontal="true"
+        android:background="?themeColor"
+        android:paddingBottom="16dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:paddingTop="16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:gravity="center_horizontal"
+            android:text="@string/tictactoe_invite_players_menu_container_seed_title"
+            android:textColor="@color/material_white"
+            android:textSize="20sp" />
+
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:id="@+id/seedOptionsContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/seedTitleContainer"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/ivNought"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:padding="32dp"
+            app:srcCompat="@drawable/vd_nought" />
+
+        <ImageView
+            android:id="@+id/ivCross"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:padding="32dp"
+            app:srcCompat="@drawable/vd_cross" />
+
+    </LinearLayout>
+
+
+    <Button
+        android:id="@+id/btnInvite"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="?attr/statusSelector"
+        android:text="@string/tictactoe_invite_players_menu_btn_invite_text"
+        android:textColor="@color/material_white"
+        android:textSize="20sp" />
+</RelativeLayout>

@@ -13,6 +13,7 @@ import android.graphics.drawable.ColorDrawable;
 import android.net.Uri;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
+import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
 import android.support.v4.content.ContextCompat;
 import android.support.v4.view.GravityCompat;
@@ -47,14 +48,17 @@ import com.croconaut.ratemebuddy.utils.ProfileUtils;
 import com.croconaut.ratemebuddy.utils.ThemeManager;
 import com.croconaut.ratemebuddy.utils.ThemeUtils;
 import com.croconaut.ratemebuddy.utils.pojo.profiles.MyProfile;
+import com.croconaut.tictactoe.ui.activities.MenuActivity;
 
 import java.io.File;
 import java.io.IOException;
 import java.lang.reflect.Method;
 import java.util.List;
 
+import eu.inloop.viewmodel.base.ViewModelBaseEmptyActivity;
 
-public class ToolbarDrawerActivity extends AppCompatActivity implements CptProcessor {
+
+public class ToolbarDrawerActivity extends ViewModelBaseEmptyActivity implements CptProcessor {
     // default color value for application (our case == green)
     private static final String STATE_SELECTED_POSITION = "stateSelectedPosition";
     private static final String TAG = ToolbarDrawerActivity.class.getName();
@@ -292,6 +296,9 @@ public class ToolbarDrawerActivity extends AppCompatActivity implements CptProce
                         case R.id.reportBug:
                             Communication.sendCptLogs(mContext);
                             return true;
+                        case R.id.gameTicTacToe:
+                            startActivity(MenuActivity.newStartIntent(getApplicationContext()));
+                            return true;
                         default:
                             return true;
                     }
@@ -447,7 +454,12 @@ public class ToolbarDrawerActivity extends AppCompatActivity implements CptProce
         return super.onMenuOpened(featureId, menu);
     }
 
-    protected void initializeHeaderWithDrawer(String header, boolean showNavIcon) {
+    public void setToolbarTitle(@NonNull final String header){
+        toolbar.setTitleTextColor(Color.WHITE);
+        toolbar.setTitle(header);
+    }
+
+    public void initializeHeaderWithDrawer(String header, boolean showNavIcon) {
         toolbar = (Toolbar) findViewById(R.id.idToolbar);
         toolbar.setTitleTextColor(Color.WHITE);
         toolbar.setTitle(header);

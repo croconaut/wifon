@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rlProfileItem"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?attr/selectableItemBackground"
+    android:clickable="true"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/rv_profile_item_padding_bottom"
+    android:paddingLeft="@dimen/rv_profile_item_padding_left"
+    android:paddingRight="@dimen/rv_profile_item_padding_rigth"
+    android:paddingTop="@dimen/rv_profile_item_padding_top">
+
+    <ImageView
+        android:id="@+id/ivPlayerPhoto"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="11dp" />
+
+    <RelativeLayout
+        android:id="@+id/rlProfileInfoContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignTop="@+id/ivPlayerPhoto"
+        android:layout_marginLeft="15dp"
+        android:layout_marginStart="15dp"
+        android:layout_toRightOf="@+id/ivPlayerPhoto">
+
+        <TextView
+            android:id="@+id/tvPlayerName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginRight="@dimen/rv_profile_item_tv_padding_right"
+            android:ellipsize="end"
+            android:gravity="center_vertical"
+            android:maxLines="2"
+            android:textColor="?attr/colorPrimaryDark"
+            android:textSize="20sp"
+            tools:text="Random name" />
+
+        <LinearLayout
+            android:id="@+id/llGamesInfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/tvPlayerName"
+            android:orientation="horizontal">
+
+
+            <TextView
+                android:id="@+id/tvTotalGames"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:paddingTop="4dp"
+                android:textColor="@color/material_black"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tvGameRatio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:paddingTop="4dp"
+                android:textColor="@color/material_black"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/tvGameState"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/llGamesInfo"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:paddingTop="4dp"
+            android:textColor="@color/material_black"
+            android:textSize="14sp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/material_grey_200" />
+
+
+</RelativeLayout>
