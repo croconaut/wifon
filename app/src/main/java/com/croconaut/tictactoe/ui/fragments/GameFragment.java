@@ -4,7 +4,6 @@ package com.croconaut.tictactoe.ui.fragments;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.graphics.PorterDuff;
-import android.graphics.drawable.Animatable;
 import android.os.Bundle;
 import android.support.annotation.CheckResult;
 import android.support.annotation.NonNull;
@@ -16,7 +15,6 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
@@ -28,7 +26,6 @@ import com.croconaut.tictactoe.payload.games.Game;
 import com.croconaut.tictactoe.payload.games.GameState;
 import com.croconaut.tictactoe.payload.moves.Move;
 import com.croconaut.tictactoe.ui.adapter.GameGridViewAdapter;
-import com.croconaut.tictactoe.ui.adapter.model.ProfileGameWrapper;
 import com.croconaut.tictactoe.ui.notifications.BaseNotificationManager;
 import com.croconaut.tictactoe.ui.viewmodel.models.GameViewModel;
 import com.croconaut.tictactoe.ui.viewmodel.views.IGameView;
@@ -56,7 +53,7 @@ public final class GameFragment extends ViewModelBaseFragment<IGameView, GameVie
     @NonNull
     public static final String TAG = GameFragment.class.getName();
 
-    @BindView(R.id.circular_indeterminate_progress_medium)
+    @BindView(R.id.horizontal_indeterminate_progress_bar)
     ProgressBar mIndeterminateProgressBar;
 
     @BindView(R.id.tvGameState)

@@ -26,7 +26,6 @@ import java.util.List;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-import static com.croconaut.ratemebuddy.R.id.tvItemGameGrid;
 import static com.croconaut.tictactoe.utils.Assertions.assertNotNull;
 
 public final class GameGridViewAdapter
@@ -103,16 +102,13 @@ public final class GameGridViewAdapter
         @NonNull
         private final IRecyclerViewOnClickListener mListener;
 
-        @BindView(tvItemGameGrid)
+        @BindView(R.id.ivItemGameGrid)
         ImageView ivGridItem;
 
         /*package*/ void setup(@NonNull final Cell cell) {
             switch (cell.getSeed()) {
                 case GameSeed.BLANK:
-                    ivGridItem.setImageResource(R.drawable.vd_empty);
-                    ivGridItem.setColorFilter(
-                            ivGridItem.getContext().getResources().getColor(R.color.material_black),
-                            PorterDuff.Mode.SRC_IN);
+                    ivGridItem.setImageDrawable(null);
                     break;
                 case GameSeed.CROSS:
                     ivGridItem.setImageResource(R.drawable.vd_cross);
