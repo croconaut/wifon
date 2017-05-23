@@ -4,6 +4,7 @@ package com.croconaut.tictactoe.ui.fragments;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.graphics.PorterDuff;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.annotation.CheckResult;
 import android.support.annotation.NonNull;
@@ -55,6 +56,10 @@ public final class GameFragment extends ViewModelBaseFragment<IGameView, GameVie
 
     @BindView(R.id.horizontal_indeterminate_progress_bar)
     ProgressBar mIndeterminateProgressBar;
+
+
+    @BindView(R.id.tvTitle)
+    TextView mTvTitle;
 
     @BindView(R.id.tvGameState)
     TextView mTvGameState;
@@ -114,6 +119,11 @@ public final class GameFragment extends ViewModelBaseFragment<IGameView, GameVie
         mIndeterminateProgressBar.getIndeterminateDrawable().setColorFilter(
                 getContext().getResources().getColor(R.color.white_background),
                 PorterDuff.Mode.SRC_IN);
+
+        Typeface demiFace = Typeface.createFromAsset(getContext().getAssets(), "fonts/berlindemi.ttf");
+        mTvTitle.setTypeface(demiFace);
+        mTvGameMySeed.setTypeface(demiFace);
+        mTvGameState.setTypeface(demiFace);
     }
 
 
