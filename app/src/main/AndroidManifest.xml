@@ -3,7 +3,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.croconaut.ratemebuddy">
 
-    <uses-feature android:name="android.hardware.camera" android:required="false" />
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
 
     <uses-permission android:name="android.permission.WRITE_INTERNAL_STORAGE" />F
     <uses-permission android:name="android.permission.VIBRATE" />
@@ -41,8 +43,10 @@
 
             <intent-filter android:autoVerify="true">
                 <action android:name="android.intent.action.VIEW" />
+
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.BROWSABLE" />
+
                 <data android:scheme="http" />
                 <data android:scheme="https" />
                 <data android:host="wifon.sk" />
@@ -98,6 +102,25 @@
         <receiver
             android:name=".CptReceiver"
             android:exported="true" />
+
+
+        <activity
+            android:name="com.croconaut.tictactoe.ui.activities.GameActivity"
+            android:windowSoftInputMode="adjustPan" />
+
+        <activity
+            android:name="com.croconaut.tictactoe.ui.activities.MenuActivity"
+            android:windowSoftInputMode="adjustPan" />
+
+        <receiver
+            android:name="com.croconaut.tictactoe.communication.receiver.InviteBroadcastReceiver"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.croconaut.tictactoe.communication.receiver.action.INVITE_CLICKED" />
+                <action android:name="com.croconaut.tictactoe.communication.receiver.action.INVITE_ACCEPTED" />
+                <action android:name="com.croconaut.tictactoe.communication.receiver.action.INVITE_DECLINED" />
+            </intent-filter>
+        </receiver>
 
         <activity android:name=".activities.DisplayProfilesActivity" />
     </application>

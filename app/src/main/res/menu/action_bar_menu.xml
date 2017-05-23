@@ -34,4 +34,10 @@
         android:visible="false"
         yourapp:showAsAction="always" />
 
+    <item
+        android:id="@+id/menuWriteToRemote"
+        android:icon="@drawable/ic_tictactoe_action_write_to_remote"
+        android:visible="false"
+        yourapp:showAsAction="always" />
+
 </menu>

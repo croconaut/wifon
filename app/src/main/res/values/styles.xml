@@ -212,7 +212,6 @@
         <item name="android:colorBackground">@color/material_white</item>
 
         <item name="themeColor">@color/pink_themed</item>
-
     </style>
 
     <attr name="iconComments" format="reference"/>
