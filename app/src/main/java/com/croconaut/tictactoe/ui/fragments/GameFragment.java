@@ -57,6 +57,8 @@ public final class GameFragment extends ViewModelBaseFragment<IGameView, GameVie
     @BindView(R.id.horizontal_indeterminate_progress_bar)
     ProgressBar mIndeterminateProgressBar;
 
+    @BindView(R.id.btnSurrender)
+    TextView mBtnSurrender;
 
     @BindView(R.id.tvTitle)
     TextView mTvTitle;
@@ -124,6 +126,7 @@ public final class GameFragment extends ViewModelBaseFragment<IGameView, GameVie
         mTvTitle.setTypeface(demiFace);
         mTvGameMySeed.setTypeface(demiFace);
         mTvGameState.setTypeface(demiFace);
+        mBtnSurrender.setTypeface(demiFace);
     }
 
 
