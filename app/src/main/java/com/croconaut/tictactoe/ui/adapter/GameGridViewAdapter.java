@@ -108,7 +108,8 @@ public final class GameGridViewAdapter
         /*package*/ void setup(@NonNull final Cell cell) {
             switch (cell.getSeed()) {
                 case GameSeed.BLANK:
-                    ivGridItem.setImageDrawable(null);
+                    ivGridItem.setImageResource(R.drawable.vd_cross);
+                    ivGridItem.setVisibility(View.INVISIBLE);
                     break;
                 case GameSeed.CROSS:
                     ivGridItem.setImageResource(R.drawable.vd_cross);
