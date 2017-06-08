@@ -6,11 +6,16 @@ import android.util.Log;
 
 import com.croconaut.cpt.data.Communication;
 import com.croconaut.cpt.network.NetworkHop;
+import com.croconaut.ratemebuddy.AppData;
 import com.croconaut.ratemebuddy.activities.CptProcessor;
 import com.croconaut.ratemebuddy.data.UIMessageDataSource;
 import com.croconaut.ratemebuddy.utils.CommonUtils;
 import com.croconaut.ratemebuddy.utils.pojo.UIMessage;
 import com.croconaut.ratemebuddy.utils.pojo.UIMessageAttachment;
+import com.croconaut.tictactoe.payload.games.Game;
+import com.croconaut.tictactoe.payload.invites.InviteRequest;
+import com.croconaut.tictactoe.storage.utils.models.InviteLockWrapper;
+import com.croconaut.tictactoe.utils.Assertions;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
@@ -23,10 +28,12 @@ public class AckedTask extends AsyncTask<Intent, Void, Intent> {
     private static final String TAG = AckedTask.class.getName();
 
     private final UIMessageDataSource uiMessageDB;
+    private final AppData mAppData;
     private final CptProcessor cptProcessor;
 
-    public AckedTask(UIMessageDataSource uiMessageDB, CptProcessor cptProcessor) {
-        this.uiMessageDB = uiMessageDB;
+    public AckedTask(AppData appData, CptProcessor cptProcessor) {
+        this.mAppData = appData;
+        this.uiMessageDB = appData.getUiMessageDataSource();
         this.cptProcessor = cptProcessor;
     }
 
@@ -37,6 +44,25 @@ public class AckedTask extends AsyncTask<Intent, Void, Intent> {
         final long id = intent.getLongExtra(Communication.EXTRA_MESSAGE_ID, -1);
         final Date date = (Date) intent.getSerializableExtra(Communication.EXTRA_MESSAGE_TIME);
         final ArrayList<NetworkHop> hops = intent.getParcelableArrayListExtra(Communication.EXTRA_MESSAGE_ACKED);
+
+        final InviteLockWrapper inviteLockWrapper = mAppData.getGameRepository().isInviteLockPresent(id);
+        if (inviteLockWrapper != null) {
+            Log.e(TAG, "INVITE LOCK - DELETING INVITE LOCK");
+            mAppData.getGameRepository().deleteInviteLock(id);
+
+            final InviteRequest inviteRequest = inviteLockWrapper.getmInviteRequest();
+
+            if (inviteRequest != null) {
+                final Game gameSend = mAppData.getGameCommunication().inviteToGame(
+                        inviteLockWrapper.getPlayerId(), inviteRequest.getSeed(), inviteRequest.getGameSize());
+                Assertions.assertNotNull(gameSend, "gameSend");
+                Log.e(TAG, "INVITE LOCK - SENDING INVITE FROM ACK");
+            }
+
+
+            return null;
+        }
+
 
         Log.e(TAG, "Message " + id + " acked");
         UIMessage uiMessage = uiMessageDB.getUIMessage(id);

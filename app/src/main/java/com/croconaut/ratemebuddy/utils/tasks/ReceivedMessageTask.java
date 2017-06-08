@@ -38,6 +38,14 @@ import com.croconaut.ratemebuddy.utils.pojo.profiles.IProfile;
 import com.croconaut.ratemebuddy.utils.pojo.profiles.MyProfile;
 import com.croconaut.ratemebuddy.utils.pojo.profiles.Profile;
 import com.croconaut.ratemebuddy.utils.pojo.profiles.states.ActualState;
+import com.croconaut.tictactoe.payload.TicTacToeGame;
+import com.croconaut.tictactoe.payload.invites.Invite;
+import com.croconaut.tictactoe.payload.invites.InviteRequest;
+import com.croconaut.tictactoe.payload.invites.InviteResponse;
+import com.croconaut.tictactoe.payload.moves.Move;
+import com.croconaut.tictactoe.payload.moves.Surrender;
+import com.croconaut.tictactoe.ui.notifications.GameNotificationManager;
+import com.croconaut.tictactoe.ui.notifications.InviteNotificationManager;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
@@ -134,9 +142,9 @@ public class ReceivedMessageTask extends AsyncTask<Intent, Void, PostExecuteValu
                     }
 
                     UIMessage uiMessage = new UIMessage.Builder(message.getTo(),
-                                                                rmbPMessageDecoded.getContent(),
-                                                                date.getTime(),
-                                                                UIMessage.INCOMING)
+                            rmbPMessageDecoded.getContent(),
+                            date.getTime(),
+                            UIMessage.INCOMING)
                             .receivedTime(message.getId())
                             .hops(hops).build();
                     appData.getUiMessageDataSource().insertMessage(uiMessage);
@@ -146,22 +154,58 @@ public class ReceivedMessageTask extends AsyncTask<Intent, Void, PostExecuteValu
 
                 if (!rmbPMessage.getContent().isEmpty()) {
                     valid = messageReceived(message,
-                                            date,
-                                            rmbPMessageDecoded
-                                            );
+                            date,
+                            rmbPMessageDecoded
+                    );
                 }
             } else if (data instanceof Attachment
                     || !message.getPayload().getAttachments().isEmpty()) {
                 valid = fileReceived(message, date);
-            } else
+            } else if (data instanceof TicTacToeGame) {
+                //FIXME: oh my god, this is so SAD to put it here! :(
+
+                if (message.getFrom() != null) {
+
+                    //this is a HACK so we have at least unknown profile inside ProfileDataSource
+                    profileUtils.findProfile(message.getFrom());
+
+                    if (data instanceof Invite) {
+                        final Invite invite = ((Invite) data);
+
+                        if (invite instanceof InviteRequest) {
+                            valid = appData.getGameCommunication().processInviteRequest(
+                                    appData, message.getFrom(), ((InviteRequest) invite));
+                        } else if (invite instanceof InviteResponse) {
+                            valid = appData.getGameCommunication().processInviteResponse(
+                                    appData, message.getFrom(), ((InviteResponse) invite));
+                        }
+                    } else if (data instanceof Move) {
+                        final Move move = ((Move) data);
+                        valid = appData.getGameCommunication().processMove(move);
+                    } else if (data instanceof Surrender) {
+                        final Surrender surrender = ((Surrender) data);
+                        valid = appData.getGameCommunication().processSurrender(surrender);
+
+                        if (!valid) {
+                            InviteNotificationManager
+                                    .cancelNotification(appData, message.getFrom().hashCode());
+                        }
+                    }
+                }
+            } else {
                 Log.e(TAG, "Received BinaryMessagePayload with wrong serialized object!");
+            }
 
             return new PostExecuteValue(valid, intent, message);
-        } catch (ClassNotFoundException | IOException e) {
+        } catch (ClassNotFoundException |
+                IOException e)
+
+        {
             Log.e(TAG, "doInBackground", e);
         }
 
         return new PostExecuteValue(false, params[0], null);
+
     }
 
     @Override
@@ -176,6 +220,8 @@ public class ReceivedMessageTask extends AsyncTask<Intent, Void, PostExecuteValu
             Intent intent = postExecuteValue.getIntent();
             Serializable data = postExecuteValue.getMessage().getPayload().getAppData();
 
+            Log.e(TAG, "onPostExecute");
+
             if (cptProcessor != null && data instanceof RMBProfile && postExecuteValue.isValid()) {
                 cptProcessor.process(intent);
                 return;
@@ -189,6 +235,14 @@ public class ReceivedMessageTask extends AsyncTask<Intent, Void, PostExecuteValu
 
             if (cptProcessor != null)
                 valid = valid && !cptProcessor.process(postExecuteValue.getIntent());
+            Log.e(TAG, "onPostExecute - other: " + valid);
+
+            if (cptProcessor != null && data instanceof TicTacToeGame) {
+                valid = valid && !cptProcessor.process(intent);
+                Log.e(TAG, "onPostExecute - TicTacToeGame: " + valid);
+            }
+
+            Log.e(TAG, "onPostExecute - valid: " + valid);
 
             if (!valid) return;
 
@@ -198,6 +252,8 @@ public class ReceivedMessageTask extends AsyncTask<Intent, Void, PostExecuteValu
                 Notification.createOrUpdate(VoteUpNotification.VOTE_UP_NOTIF_ID, appData);
             else if (data instanceof Message || data instanceof Attachment)
                 Notification.createOrUpdate(MessageNotification.MESSAGE_NOTIF_ID, appData);
+            else if (data instanceof Move || data instanceof Surrender)
+                GameNotificationManager.createNewMoveNotification(appData, ((TicTacToeGame) data));
             else
                 Log.e(TAG, "Cannot show notification to this intent!");
         } catch (ClassNotFoundException | IOException e) {

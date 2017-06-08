@@ -75,7 +75,7 @@ public class CptReceiver extends com.croconaut.cpt.ui.CptReceiver {
             }
 
             case Communication.ACTION_MESSAGE_ACKED: {
-                AckedTask ackedTask = new AckedTask(appData.getUiMessageDataSource(), appData.getCurrentActivity());
+                AckedTask ackedTask = new AckedTask(appData, appData.getCurrentActivity());
                 ackedTask.execute(intent);
                 break;
             }
