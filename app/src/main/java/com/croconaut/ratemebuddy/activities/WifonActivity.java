@@ -241,6 +241,8 @@ public abstract class WifonActivity extends ToolbarDrawerActivity {
             // off
             cptController.setMode(LinkLayerMode.OFF);
         }
+        // set tracking to yes by default
+        cptController.setTrackingEnabled(PreferenceManager.getDefaultSharedPreferences(this).getBoolean(SettingsActivity.DISPLAY_INFO_PREF, true));
     }
 
     private boolean mIsAlreadyCheckingWifi;
@@ -250,7 +252,7 @@ public abstract class WifonActivity extends ToolbarDrawerActivity {
         if (mShouldCheckWifiState && !mIsAlreadyCheckingWifi
                 && MyProfile.getInstance(mContext) != null) {
             mIsAlreadyCheckingWifi = true;
-            final WifiManager wm = (WifiManager) getSystemService(WIFI_SERVICE);
+            final WifiManager wm = (WifiManager) getApplicationContext().getSystemService(WIFI_SERVICE);
             if (wm.getWifiState() != WifiManager.WIFI_STATE_ENABLING && wm.getWifiState() != WifiManager.WIFI_STATE_ENABLED) {
                 DialogInterface.OnClickListener dialogListener = new DialogInterface.OnClickListener() {
                     @Override
