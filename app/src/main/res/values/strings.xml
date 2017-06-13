@@ -299,6 +299,9 @@
     <string name="tictactoe_invite_players_game_state_in_progress_pending_request">Waiting for your answer!</string>
     <string name="tictactoe_invite_players_game_state_in_progress_your_move">Waiting on your move!</string>
     <string name="tictactoe_invite_players_game_state_in_progress_opponent_move">Waiting on opponent move!</string>
+    <string name="tictactoe_invite_players_game_state_game_end_won">Won!</string>
+    <string name="tictactoe_invite_players_game_state_game_end_lost">Lost!</string>
+    <string name="tictactoe_invite_players_game_state_game_end_draw">Draw!</string>
 
     <string name="tictactoe_game_player_seed">You play with \'%1$s\'</string>
 
@@ -316,8 +319,8 @@
     <string name="tictactoe_game_dialog_repeat_game_message_text">Do you want to repeat the game?</string>
     <string name="tictactoe_game_dialog_btn_positive_text">Yes</string>
     <string name="tictactoe_game_dialog_btn_negative_text">No</string>
-    <string name="tictactoe_game_dialog_game_end_already_invite_message_text">Game has ended. %1$s invites you to play %2$dx%3$d another TicTacToe game, with you playing as %4$s! Accept?</string>
-    <string name="tictactoe_game_dialog_game_end_already_invite_message_title">Invite found!</string>
+    <string name="tictactoe_game_dialog_invite_message_text">%1$s invites you to play %2$dx%3$d another TicTacToe game, with you playing as %4$s! Accept?</string>
+    <string name="tictactoe_game_dialog_invite_message_title">Invite found!</string>
 
     <string name="tictactoe_game_dialog_surrender_game_title_text">Surrender ?</string>
     <string name="tictactoe_game_dialog_surrender_game_message_text">This means that the game will end with you losing. Still surrender ?</string>

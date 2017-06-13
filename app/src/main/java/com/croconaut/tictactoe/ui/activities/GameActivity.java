@@ -103,11 +103,11 @@ public final class GameActivity extends BaseActivity
 
             final AlertDialog.Builder builder = new AlertDialog.Builder(this);
             builder.setTitle(
-                    res.getString(R.string.tictactoe_game_dialog_game_end_already_invite_message_title));
+                    res.getString(R.string.tictactoe_game_dialog_invite_message_title));
             builder.setCancelable(false);
 
             builder.setMessage(
-                    res.getString(R.string.tictactoe_game_dialog_game_end_already_invite_message_text,
+                    res.getString(R.string.tictactoe_game_dialog_invite_message_text,
                             profile.getName(), inviteRequest.getGameSize(),
                             inviteRequest.getGameSize(), getSeedString(inviteRequest.getSeed())));
             builder.setPositiveButton(
@@ -203,7 +203,7 @@ public final class GameActivity extends BaseActivity
                     .getProfileByCrocoId(gameForInvite.get(0).getRemoteProfileId());
 
             builder.setMessage(
-                    res.getString(R.string.tictactoe_game_dialog_game_end_already_invite_message_text,
+                    res.getString(R.string.tictactoe_game_dialog_invite_message_text,
                             profile.getName(), inviteRequest.getGameSize(),
                             inviteRequest.getGameSize(), getSeedString(inviteRequest.getSeed())));
             builder.setPositiveButton(

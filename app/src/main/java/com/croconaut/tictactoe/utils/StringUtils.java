@@ -53,9 +53,21 @@ public final class StringUtils {
                 return myGameSeed == GameSeed.NOUGHT
                         ? context.getString(R.string.tictactoe_invite_players_game_state_in_progress_your_move)
                         : context.getString(R.string.tictactoe_invite_players_game_state_in_progress_opponent_move);
-            default:
-                throw new IllegalArgumentException("Received not in progress state: " + game.getGameState());
+            case GameState.DRAW:
+                return context.getString(R.string.tictactoe_invite_players_game_state_draw_text);
+            case GameState.SURRENDER:
+                return context.getString(R.string.tictactoe_invite_players_game_state_game_end_lost);
+            case GameState.WIN_CROSS:
+                return myGameSeed == GameSeed.NOUGHT
+                        ? context.getString(R.string.tictactoe_invite_players_game_state_game_end_lost)
+                        : context.getString(R.string.tictactoe_invite_players_game_state_game_end_won);
+            case GameState.WIN_NOUGHT:
+                return myGameSeed == GameSeed.NOUGHT
+                        ? context.getString(R.string.tictactoe_invite_players_game_state_game_end_won)
+                        : context.getString(R.string.tictactoe_invite_players_game_state_game_end_lost);
         }
+
+        return "";
     }
 
     /**
