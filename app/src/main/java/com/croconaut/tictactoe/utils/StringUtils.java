@@ -56,15 +56,15 @@ public final class StringUtils {
             case GameState.DRAW:
                 return context.getString(R.string.tictactoe_invite_players_game_state_draw_text);
             case GameState.SURRENDER:
-                return context.getString(R.string.tictactoe_invite_players_game_state_game_end_lost);
+                return context.getString(R.string.tictactoe_invite_players_game_state_lost_text);
             case GameState.WIN_CROSS:
                 return myGameSeed == GameSeed.NOUGHT
-                        ? context.getString(R.string.tictactoe_invite_players_game_state_game_end_lost)
-                        : context.getString(R.string.tictactoe_invite_players_game_state_game_end_won);
+                        ? context.getString(R.string.tictactoe_invite_players_game_state_lost_text)
+                        : context.getString(R.string.tictactoe_invite_players_game_state_won_text);
             case GameState.WIN_NOUGHT:
                 return myGameSeed == GameSeed.NOUGHT
-                        ? context.getString(R.string.tictactoe_invite_players_game_state_game_end_won)
-                        : context.getString(R.string.tictactoe_invite_players_game_state_game_end_lost);
+                        ? context.getString(R.string.tictactoe_invite_players_game_state_won_text)
+                        : context.getString(R.string.tictactoe_invite_players_game_state_lost_text);
         }
 
         return "";
