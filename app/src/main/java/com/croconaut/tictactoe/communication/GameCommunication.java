@@ -2,7 +2,6 @@ package com.croconaut.tictactoe.communication;
 
 
 import android.content.Context;
-import android.provider.ContactsContract;
 import android.support.annotation.CheckResult;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -108,7 +107,6 @@ public final class GameCommunication {
 
         if (null != gameInPendingState) {
             if (gameInPendingState.getGameTimestamp() > inviteRequest.getGameTimestamp()) {
-
                 insertPendingGame(remotePlayerId, inviteRequest);
 
                 mGameRepository.deleteGame(gameInPendingState);
@@ -158,6 +156,10 @@ public final class GameCommunication {
 
         if (null != game) {
             valid = true;
+
+            if (!StateUtils.isGameInProgress(game.getGameState())) {
+                return valid;
+            }
 
             if (inviteResponse.isGameAccepted()) {
                 @GameState final int newGameState = game.getGameSeed() == GameSeed.CROSS
@@ -305,11 +307,11 @@ public final class GameCommunication {
         final Game game = mGameRepository.getGameByGameId(surrender.getGameId());
 
         if (null != game) {
-            if(StateUtils.PLAYING_STATES.contains(game.getGameState())){
+            if (StateUtils.PLAYING_STATES.contains(game.getGameState())) {
                 mGameRepository.updateGameState(
                         game, game.getGameSeed() == GameSeed.CROSS ? GameState.WIN_CROSS : GameState.WIN_NOUGHT);
                 valid = true;
-            } else if (StateUtils.PENDING_STATES.contains(game.getGameState())){
+            } else if (StateUtils.PENDING_STATES.contains(game.getGameState())) {
                 mGameRepository.deleteGame(game);
             }
         } else {
