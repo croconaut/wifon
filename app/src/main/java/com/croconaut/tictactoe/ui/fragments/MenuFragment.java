@@ -13,6 +13,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.croconaut.ratemebuddy.AppData;
 import com.croconaut.ratemebuddy.R;
@@ -51,10 +52,10 @@ public final class MenuFragment extends ViewModelBaseFragment<IErrorView, GameOp
     private OnGameConfirmClickListener mCallback;
 
     @GameSize
-    private int mGameSize;
+    private int mGameSize = -1;
 
     @GameSeed
-    private int mGameSeed;
+    private int mGameSeed = -1;
 
     @BindView(R.id.tvSizeNormal)
     TextView mTvSizeNormal;
@@ -187,6 +188,14 @@ public final class MenuFragment extends ViewModelBaseFragment<IErrorView, GameOp
     public void onConfirmGameClick() {
         assertNotNull(mCallback, "mCallback");
         assertNotNull(mPlayerId, "mPlayerId");
+
+        //noinspection WrongConstant
+        if (mGameSeed == -1 || mGameSize == -1) {
+            Toast.makeText(getContext(), getResources()
+                            .getString(R.string.tictactoe_toast_create_game_empty_size_or_seed),
+                    Toast.LENGTH_LONG).show();
+            return;
+        }
 
         mCallback.onConfirmGameClick(mPlayerId, mGameSeed, mGameSize);
     }
