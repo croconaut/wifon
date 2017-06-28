@@ -177,6 +177,8 @@ public final class GameFragment extends ViewModelBaseFragment<IGameView, GameVie
             return;
         }
 
+        getViewModel().updateMoves(game.getGameId());
+
         mTvGameState.setText(getGameInProgressString(getContext(), game));
 
         if (StateUtils.isPlayerWaiting(game)) {
@@ -214,8 +216,6 @@ public final class GameFragment extends ViewModelBaseFragment<IGameView, GameVie
 
         BaseNotificationManager
                 .cancelNotification(getContext(), mGame.getRemoteProfileId().hashCode());
-
-        getViewModel().updateMoves(game.getGameId());
     }
 
     @Override
