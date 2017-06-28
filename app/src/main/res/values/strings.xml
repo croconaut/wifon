@@ -325,7 +325,7 @@
     <string name="tictactoe_game_dialog_surrender_game_btn_negative_text">No</string>
 
     <string name="tictactoe_toast_invite_refused_game_already_pending">This player has already challenged you to play</string>
-    <string name="tictactoe_toast_create_game_empty_size_or_seed">You need to choose the seed and size!</string>
+    <string name="tictactoe_toast_create_game_empty_size_or_seed">Pick your symbol and board size</string>
 
 
 </resources>

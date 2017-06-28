@@ -320,4 +320,5 @@
     <string name="tictactoe_game_dialog_invite_message_text">%1$s ťa vyzval na ďalšiu %2$dx%3$d Tic Tac Toe partičku, hráš s: %4$s</string>
     <string name="tictactoe_invite_players_game_state_won_text">Vyhral si! :-)</string>
     <string name="tictactoe_invite_players_game_state_lost_text">Prehral si :-(</string>
+    <string name="tictactoe_toast_create_game_empty_size_or_seed">Zvoľ si X / O a veľkosť hracieho poľa</string>
 </resources>
