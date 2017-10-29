@@ -1,8 +1,7 @@
 apply plugin: 'com.android.application'
-apply plugin: 'com.neenbedankt.android-apt'
 
 android {
-    buildToolsVersion "25.0.3"
+    buildToolsVersion "27"
 
     defaultConfig {
         applicationId "com.croconaut.ratemebuddy"
@@ -13,8 +12,8 @@ android {
         minSdkVersion 16
         targetSdkVersion 22
 
-        versionCode 17
-        versionName "1.1.0"
+        versionCode 18
+        versionName "1.1.1"
 
         compileOptions {
             sourceCompatibility JavaVersion.VERSION_1_7
@@ -29,13 +28,13 @@ android {
 
     buildTypes {
         release {
-            compileSdkVersion 25
+            compileSdkVersion 27
 
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
         debug {
-            compileSdkVersion 25
+            compileSdkVersion 26
         }
     }
 }
@@ -48,37 +47,34 @@ repositories {
     maven {
         url "https://s3.amazonaws.com/repo.commonsware.com"
     }
+    google()
 }
 
 buildscript {
     repositories {
         mavenCentral()
     }
-    dependencies {
-        classpath 'com.neenbedankt.gradle.plugins:android-apt:1.8'
-    }
 }
 
 dependencies {
-    compile 'com.android.support:appcompat-v7:25.3.1'
-    compile 'com.android.support:design:25.3.1'
-    compile 'com.android.support:support-v13:25.3.1'
-    compile 'com.android.support:recyclerview-v7:25.3.1'
-    compile 'com.android.support:cardview-v7:25.3.1'
+    compile 'com.android.support:appcompat-v7:27.0.0'
+    compile 'com.android.support:design:27.0.0'
+    compile 'com.android.support:support-v13:27.0.0'
+    compile 'com.android.support:recyclerview-v7:27.0.0'
     compile 'com.github.bumptech.glide:glide:3.7.0' //google lib
 
-    compile 'com.roughike:bottom-bar:2.0.2'
+    compile 'com.roughike:bottom-bar:2.3.1'
     compile 'com.soundcloud.android:android-crop:1.0.1@aar'
     compile 'com.amulyakhare:com.amulyakhare.textdrawable:1.0.1'
 
-    compile 'com.croconaut:cpt:1.0.6'
+    compile 'com.croconaut:cpt:1.0.9'
 
     // Required for unit testing
     testCompile 'junit:junit:4.12'
     testCompile 'org.mockito:mockito-core:1.10.19'
 
-    compile 'com.jakewharton:butterknife:8.0.1'
-    apt 'com.jakewharton:butterknife-compiler:8.0.1'
+    compile 'com.jakewharton:butterknife:8.8.1'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
 
-    compile 'eu.inloop:androidviewmodel:1.0.0'
+    compile 'eu.inloop:androidviewmodel:1.3.3'
 }
