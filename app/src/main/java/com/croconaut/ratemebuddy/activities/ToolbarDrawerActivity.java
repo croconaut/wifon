@@ -268,6 +268,13 @@ public class ToolbarDrawerActivity extends ViewModelBaseEmptyActivity implements
                             );
 
                             String text = String.format(
+                                    getResources().getString(R.string.invite_profile_text),
+                                    getResources().getString(R.string.app_name),
+                                    "%1$s",   // will be replaced by the complete uri
+                                    name.replace("%", "%%") // in case name contains '%'
+                            );
+
+                            String textHtml = String.format(
                                     getResources().getString(R.string.invite_profile_text_hml),
                                     getResources().getString(R.string.app_name),
                                     "%1$s",   // will be replaced by the complete uri
@@ -278,6 +285,7 @@ public class ToolbarDrawerActivity extends ViewModelBaseEmptyActivity implements
                                     mRes.getString(R.string.action_invite_friend),
                                     subject,
                                     text,
+                                    textHtml,
                                     baseUri,
                                     ExternalUriContract.PARAM_PROFILE_CROCO_ID
                             );
